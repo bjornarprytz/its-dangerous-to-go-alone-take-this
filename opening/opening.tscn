@@ -63,10 +63,8 @@ script = ExtResource("1_rfjhp")
 [node name="Sky" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_eeq7g")
 layout_mode = 2
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 1161.0
-offset_bottom = 657.0
+offset_right = 1152.0
+offset_bottom = 648.0
 color = Color(0, 0.105882, 0.105882, 1)
 
 [node name="Moon" type="Sprite2D" parent="."]
@@ -92,10 +90,8 @@ texture = ExtResource("3_fo66x")
 [node name="Clouds" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_bkwkg")
 layout_mode = 0
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 1159.0
-offset_bottom = 1605.0
+offset_right = 1154.0
+offset_bottom = 1296.0
 texture = SubResource("CanvasTexture_hgfnk")
 
 [node name="StartButton" type="TextureButton" parent="."]

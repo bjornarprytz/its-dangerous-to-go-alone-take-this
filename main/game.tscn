@@ -1,18 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://n7bdav5gmmj6"]
+[gd_scene load_steps=6 format=3 uid="uid://bto1hxpc0pp8u"]
 
-[ext_resource type="Shader" path="res://opening/gradient.gdshader" id="1_1wxoq"]
+[ext_resource type="PackedScene" uid="uid://deq72o2rf1ikl" path="res://main/campfire.tscn" id="1_764no"]
+[ext_resource type="Script" path="res://main/game.gd" id="1_qyak7"]
+[ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="2_kwlkg"]
+[ext_resource type="PackedScene" uid="uid://cdq57dqyn4w41" path="res://main/player.tscn" id="3_etpa8"]
+[ext_resource type="PackedScene" uid="uid://c78xt0getueay" path="res://main/dialogue.tscn" id="4_3xw5k"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_42s7u"]
-shader = ExtResource("1_1wxoq")
-shader_parameter/top_color = Color(0, 0.0980392, 0.356863, 1)
-shader_parameter/bottom_color = Color(0, 0.247059, 0.32549, 1)
+[node name="Game" type="Node2D"]
+script = ExtResource("1_qyak7")
 
-[node name="Node2D" type="Node2D"]
+[node name="Ground" type="ColorRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 648.0
+color = Color(0, 0.105882, 0, 1)
 
-[node name="Sky" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_42s7u")
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 1161.0
-offset_bottom = 657.0
-color = Color(0, 0.105882, 0.105882, 1)
+[node name="Campfire" parent="." instance=ExtResource("1_764no")]
+
+[node name="Player" parent="." instance=ExtResource("3_etpa8")]
+
+[node name="Helper" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(656, 303)
+scale = Vector2(0.5625, 0.5625)
+texture = ExtResource("2_kwlkg")
+
+[node name="Dialogue" parent="." instance=ExtResource("4_3xw5k")]
+visible = false
+offset_left = 208.0
+offset_top = 475.0
+offset_right = 961.0
+offset_bottom = 636.0
+
+[node name="Screen" type="ColorRect" parent="."]
+visible = false
+light_mask = 0
+offset_right = 1154.0
+offset_bottom = 648.0
+color = Color(0, 0.0980392, 0.356863, 1)
+
+[connection signal="dialogueFinished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]

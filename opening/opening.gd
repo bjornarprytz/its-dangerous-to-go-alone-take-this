@@ -23,4 +23,4 @@ func _transition():
 
 	await tween.finished
 	
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://opening/transition.tscn")

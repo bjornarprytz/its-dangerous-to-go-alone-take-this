@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://deq72o2rf1ikl"]
+
+[ext_resource type="Texture2D" uid="uid://jdke5bfxwanf" path="res://sprites/campfire.png" id="1_3hhsw"]
+[ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_h2av7"]
+[ext_resource type="Script" path="res://main/campfire.gd" id="2_q41kg"]
+
+[node name="Campfire" type="Sprite2D"]
+position = Vector2(564, 356)
+texture = ExtResource("1_3hhsw")
+script = ExtResource("2_q41kg")
+
+[node name="Sparks" type="CPUParticles2D" parent="."]
+position = Vector2(0, -2)
+amount = 20
+randomness = 0.38
+lifetime_randomness = 0.16
+emission_shape = 3
+emission_rect_extents = Vector2(20, 5)
+direction = Vector2(0, -1)
+gravity = Vector2(0, 0)
+initial_velocity_min = 46.51
+initial_velocity_max = 147.29
+color = Color(0.788235, 0, 0.788235, 1)
+
+[node name="Light" type="PointLight2D" parent="."]
+scale = Vector2(1.1875, 1.1875)
+energy = 0.6
+texture = ExtResource("2_h2av7")
