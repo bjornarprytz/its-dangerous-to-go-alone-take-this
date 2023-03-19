@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="ItsDangerousTtoGoAloneTakeThis"
+run/main_scene="res://opening/opening.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioPlayer="*res://audio_player.tscn"
+
+[dotnet]
+
+project/assembly_name="ItsDangerousTtoGoAloneTakeThis"
 
 [rendering]
 

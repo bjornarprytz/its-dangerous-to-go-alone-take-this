@@ -1,0 +1,108 @@
+[gd_scene load_steps=16 format=3 uid="uid://d1edb27f6igjg"]
+
+[ext_resource type="Shader" path="res://opening/gradient.gdshader" id="1_jv2dx"]
+[ext_resource type="Script" path="res://opening/opening.gd" id="1_rfjhp"]
+[ext_resource type="Shader" path="res://opening/chromatic_aberration.gdshader" id="2_wjapv"]
+[ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="3_fo66x"]
+[ext_resource type="Texture2D" uid="uid://jg4d1teqcvin" path="res://sprites/moon.png" id="4_kij6e"]
+[ext_resource type="Script" path="res://opening/moon-control.gd" id="5_dwefq"]
+[ext_resource type="Shader" path="res://opening/cloud.gdshader" id="6_6ug5i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eeq7g"]
+shader = ExtResource("1_jv2dx")
+shader_parameter/top_color = Color(0, 0.0980392, 0.356863, 1)
+shader_parameter/bottom_color = Color(0, 0.247059, 0.32549, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_734kd"]
+shader = ExtResource("2_wjapv")
+shader_parameter/apply = true
+shader_parameter/amount = 0.0
+shader_parameter/offset_texture = ExtResource("3_fo66x")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_nk286"]
+seed = 7
+frequency = 0.002
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nrk1l"]
+width = 1164
+height = 660
+generate_mipmaps = false
+seamless = true
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_nk286")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o7etc"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hewmu"]
+seamless = true
+seamless_blend_skirt = 1.0
+noise = SubResource("FastNoiseLite_o7etc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bkwkg"]
+shader = ExtResource("6_6ug5i")
+shader_parameter/scroll = Vector2(0.8, 0.2)
+shader_parameter/speed = 0.1
+shader_parameter/fluffiness = 0.145
+shader_parameter/alpha = 0.4
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_nrk1l")
+shader_parameter/noise_tex2 = SubResource("NoiseTexture2D_hewmu")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hgfnk"]
+
+[node name="night_sky_main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rfjhp")
+
+[node name="Sky" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_eeq7g")
+layout_mode = 2
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1161.0
+offset_bottom = 657.0
+color = Color(0, 0.105882, 0.105882, 1)
+
+[node name="Moon" type="Sprite2D" parent="."]
+light_mask = 2
+material = SubResource("ShaderMaterial_734kd")
+position = Vector2(366.25, 244.25)
+scale = Vector2(0.751666, 0.751666)
+texture = ExtResource("4_kij6e")
+script = ExtResource("5_dwefq")
+
+[node name="InnerHalo" type="PointLight2D" parent="Moon"]
+scale = Vector2(1.40489, 1.40489)
+color = Color(1, 0.207843, 1, 1)
+energy = 1.5
+texture = ExtResource("3_fo66x")
+
+[node name="OuterHalo" type="PointLight2D" parent="Moon"]
+scale = Vector2(3.97441, 3.97441)
+color = Color(1, 0.258824, 1, 1)
+energy = 0.75
+texture = ExtResource("3_fo66x")
+
+[node name="Clouds" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_bkwkg")
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1159.0
+offset_bottom = 1605.0
+texture = SubResource("CanvasTexture_hgfnk")
+
+[node name="StartButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 162.0
+offset_right = 452.0
+offset_bottom = 332.0
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

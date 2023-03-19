@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://csmix5f3c6nki"]
+
+[ext_resource type="AudioStream" uid="uid://dtu74qmyfluth" path="res://sound/runningoutofspace_master1.wav" id="1_00c0h"]
+[ext_resource type="Script" path="res://audio_player.gd" id="2_16g0t"]
+
+[node name="Player" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_00c0h")
+volume_db = -25.0
+autoplay = true
+script = ExtResource("2_16g0t")

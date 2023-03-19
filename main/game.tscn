@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://n7bdav5gmmj6"]
+
+[ext_resource type="Shader" path="res://opening/gradient.gdshader" id="1_1wxoq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_42s7u"]
+shader = ExtResource("1_1wxoq")
+shader_parameter/top_color = Color(0, 0.0980392, 0.356863, 1)
+shader_parameter/bottom_color = Color(0, 0.247059, 0.32549, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sky" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_42s7u")
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1161.0
+offset_bottom = 657.0
+color = Color(0, 0.105882, 0.105882, 1)
