@@ -5,7 +5,8 @@
 - Tree sprite + animation
 - Player sprite + animation
 - Helper sprite
-- Eyes sprite + animation
+- Beast Eyes
+  - Movement (approach player, but shy away)
 - Casette sprite
 - Ground tiles
 - River tiles

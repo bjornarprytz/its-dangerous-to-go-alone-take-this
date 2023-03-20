@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://doboifp4icdp4"]
+
+[ext_resource type="Texture2D" uid="uid://xnik6s6b820t" path="res://sprites/blink/eye blink1.png" id="1_iwe6c"]
+[ext_resource type="Texture2D" uid="uid://qstomwb0f6nj" path="res://sprites/blink/eye blink2.png" id="2_knbil"]
+[ext_resource type="Texture2D" uid="uid://bcwjn1aqp7jgy" path="res://sprites/blink/eye blink3.png" id="3_pdstf"]
+[ext_resource type="Texture2D" uid="uid://b6fcbg00vi2vr" path="res://sprites/blink/eye blink4.png" id="4_xj35f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eynei"]
+animations = [{
+"frames": [{
+"duration": 12.0,
+"texture": ExtResource("1_iwe6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_knbil")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_pdstf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xj35f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="BeastEyes" type="AnimatedSprite2D"]
+position = Vector2(227, 552)
+sprite_frames = SubResource("SpriteFrames_eynei")
+frame_progress = 0.167376
