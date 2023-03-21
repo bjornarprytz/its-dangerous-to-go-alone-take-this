@@ -1,4 +1,5 @@
 extends Sprite2D
+class_name Player
 
 @export var move_speed = 150.0
 

@@ -50,8 +50,9 @@ offset_right = 1154.0
 offset_bottom = 648.0
 color = Color(0, 0.0980392, 0.356863, 1)
 
-[node name="Beasts" type="Node2D" parent="."]
+[node name="Beasts" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("6_cyr2i")
+player = NodePath("../Player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2(576, 324)

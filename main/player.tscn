@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdq57dqyn4w41"]
+[gd_scene load_steps=5 format=3 uid="uid://cdq57dqyn4w41"]
 
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="1_5yso5"]
 [ext_resource type="Script" path="res://main/Player.gd" id="2_soykt"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="3_l22if"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ia6y7"]
+radius = 295.133
 
 [node name="Player" type="Sprite2D"]
 modulate = Color(0, 1, 1, 1)
@@ -10,7 +13,14 @@ scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("1_5yso5")
 script = ExtResource("2_soykt")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="Light" type="PointLight2D" parent="."]
 scale = Vector2(1.81944, 1.81944)
 energy = 0.69
 texture = ExtResource("3_l22if")
+
+[node name="RepellantArea" type="Area2D" parent="Light"]
+scale = Vector2(0.549618, 0.549618)
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Light/RepellantArea"]
+shape = SubResource("CircleShape2D_ia6y7")

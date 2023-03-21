@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://doboifp4icdp4"]
+[gd_scene load_steps=9 format=3 uid="uid://doboifp4icdp4"]
 
 [ext_resource type="Texture2D" uid="uid://xnik6s6b820t" path="res://sprites/blink/eye blink1.png" id="1_iwe6c"]
 [ext_resource type="Texture2D" uid="uid://qstomwb0f6nj" path="res://sprites/blink/eye blink2.png" id="2_knbil"]
@@ -27,6 +27,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bmkda"]
+radius = 18.0
+
 [node name="BeastEyes" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_eynei")
 frame_progress = 0.167376
@@ -42,4 +45,11 @@ position = Vector2(8, -1)
 scale = Vector2(0.069, 0.03)
 texture = ExtResource("5_k0gpa")
 
+[node name="SafeSpace" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SafeSpace"]
+shape = SubResource("CircleShape2D_bmkda")
+
 [connection signal="frame_changed" from="." to="." method="_on_frame_changed"]
+[connection signal="area_shape_entered" from="SafeSpace" to="." method="_on_safe_space_area_shape_entered"]
+[connection signal="area_shape_exited" from="SafeSpace" to="." method="_on_safe_space_area_shape_exited"]
