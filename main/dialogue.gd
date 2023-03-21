@@ -3,6 +3,10 @@ class_name Dialogue
 
 signal dialogueFinished
 
+@export var hero: Node2D
+@export var helper: Node2D
+@export var camera: Node2D
+
 enum SPEAKER {
 	Same,
 	Hero,
@@ -21,6 +25,10 @@ var lines = [
 	{
 		"words": "Don't thank me yet... it has no rewind button... heh :sweat_smile:",
 		"speaker": SPEAKER.Helper
+	},
+	{
+		"words": "...",
+		"speaker": SPEAKER.Hero
 	}
 ]
 
@@ -30,6 +38,7 @@ var lines = [
 @onready var speaker : Sprite2D = $HBox/Container/Speaking
 
 var _tween : Tween
+var _camera_tween : Tween
 var _current_line : int = 0
 var _done_speaking : bool = true
 
@@ -50,6 +59,8 @@ func _speak(what: String,  who: SPEAKER=SPEAKER.Same):
 		speaker.modulate = Color.YELLOW
 	if (who == SPEAKER.Hero):
 		speaker.modulate = Color.BLUE
+		
+	_focus_speaker(who)
 	
 	words.visible_ratio = 0.0
 	_done_speaking = false
@@ -58,7 +69,7 @@ func _speak(what: String,  who: SPEAKER=SPEAKER.Same):
 	if (_tween != null):
 		_tween.kill()
 	_tween = create_tween()
-	_tween.tween_property(words, 'visible_ratio', 1.0, 2.0)
+	_tween.tween_property(words, 'visible_ratio', 1.0, 3.0)
 	await _tween.finished
 	
 	_done_speaking = true
@@ -68,3 +79,15 @@ func _faster():
 		_tween.kill()
 	_done_speaking = true
 	words.visible_ratio = 1.0
+
+func _focus_speaker(character: SPEAKER):
+	if (_camera_tween != null):
+		_camera_tween.kill()
+	
+	_camera_tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	if (character == SPEAKER.Helper):
+		_camera_tween.tween_property(camera, 'position', helper.position, 1.0)
+	else:
+		_camera_tween.tween_property(camera, 'position', hero.position, 1.0)
+	
+	await _camera_tween.finished

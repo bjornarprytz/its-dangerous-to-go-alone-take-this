@@ -8,9 +8,9 @@
 - Beast Eyes
   - Movement (approach player, but shy away)
 - Casette sprite
-- Ground tiles
-- River tiles
+- Darkness
 - Lighting
+- River tiles
 - Map layout
 - End game
   - Loss condition

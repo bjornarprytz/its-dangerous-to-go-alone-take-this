@@ -26,6 +26,6 @@ animations = [{
 }]
 
 [node name="BeastEyes" type="AnimatedSprite2D"]
-position = Vector2(227, 552)
+light_mask = 0
 sprite_frames = SubResource("SpriteFrames_eynei")
 frame_progress = 0.167376
