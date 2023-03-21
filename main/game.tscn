@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bto1hxpc0pp8u"]
+[gd_scene load_steps=9 format=3 uid="uid://bto1hxpc0pp8u"]
 
 [ext_resource type="PackedScene" uid="uid://deq72o2rf1ikl" path="res://main/campfire.tscn" id="1_764no"]
 [ext_resource type="Script" path="res://main/game.gd" id="1_qyak7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cdq57dqyn4w41" path="res://main/player.tscn" id="3_etpa8"]
 [ext_resource type="PackedScene" uid="uid://c78xt0getueay" path="res://main/dialogue.tscn" id="4_3xw5k"]
 [ext_resource type="Script" path="res://main/Beasts.gd" id="6_cyr2i"]
+[ext_resource type="Script" path="res://main/camera.gd" id="6_oqr6w"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qyak7")
@@ -25,26 +26,22 @@ position = Vector2(656, 303)
 scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("2_kwlkg")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(576, 324)
+script = ExtResource("6_oqr6w")
+player = NodePath("../Player")
 
-[node name="ColorRect" type="ColorRect" parent="Camera2D"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.0352941, 0.0980392, 0.0431373, 1)
+[node name="UI" type="CanvasLayer" parent="Camera"]
 
-[node name="Dialogue" parent="." node_paths=PackedStringArray("hero", "helper", "camera") instance=ExtResource("4_3xw5k")]
-visible = false
+[node name="Dialogue" parent="Camera/UI" node_paths=PackedStringArray("hero", "helper", "camera") instance=ExtResource("4_3xw5k")]
+light_mask = 0
 offset_left = 208.0
 offset_top = 475.0
 offset_right = 961.0
 offset_bottom = 636.0
-hero = NodePath("../Player")
-helper = NodePath("../Helper")
-camera = NodePath("../Camera2D")
+hero = NodePath("../../../Player")
+helper = NodePath("../../../Helper")
+camera = NodePath("../..")
 
 [node name="Screen" type="ColorRect" parent="."]
 visible = false
@@ -56,5 +53,9 @@ color = Color(0, 0.0980392, 0.356863, 1)
 [node name="Beasts" type="Node2D" parent="."]
 script = ExtResource("6_cyr2i")
 
-[connection signal="dialogueFinished" from="Dialogue" to="." method="_on_dialogue_dialogue_finished"]
-[connection signal="dialogueFinished" from="Dialogue" to="Beasts" method="_on_dialogue_dialogue_finished"]
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(576, 324)
+color = Color(0, 0, 0, 1)
+
+[connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="." method="_on_dialogue_dialogue_finished"]
+[connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="Beasts" method="_on_dialogue_dialogue_finished"]

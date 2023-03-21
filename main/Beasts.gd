@@ -25,6 +25,7 @@ func _spawn_beast(pos : Vector2):
 	beast.position = pos
 	beast.scale = Vector2.ONE * (randf_range(0.5, 1.5))
 	beast.speed_scale = randf() + 0.5
+	beast.modulate = Color(randf(), randf(), randf())
 	beast.play()
 
 
