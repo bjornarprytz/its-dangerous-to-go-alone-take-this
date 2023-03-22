@@ -15,18 +15,20 @@ script = ExtResource("1_qyak7")
 [node name="TileMap" parent="." instance=ExtResource("2_6aghd")]
 
 [node name="Campfire" parent="." instance=ExtResource("1_764no")]
+position = Vector2(576, 319)
 
 [node name="Player" parent="." instance=ExtResource("3_etpa8")]
-position = Vector2(462, 412)
+position = Vector2(557, 331)
 
 [node name="Helper" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(656, 303)
-scale = Vector2(0.5625, 0.5625)
+position = Vector2(591, 309)
+scale = Vector2(0.125, 0.125)
 texture = ExtResource("2_kwlkg")
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
 position = Vector2(576, 320)
+zoom = Vector2(4, 4)
 script = ExtResource("6_oqr6w")
 player = NodePath("../Player")
 

@@ -1,9 +1,9 @@
-extends Sprite2D
+extends CharacterBody2D
 class_name Player
 
-@export var move_speed = 150.0
+@export var move_speed = 50.0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var move_vector = Vector2.ZERO
 	var walk_factor = 1.0
 	
@@ -18,5 +18,7 @@ func _physics_process(delta: float) -> void:
 	if (Input.is_key_pressed(KEY_SHIFT)):
 		walk_factor = 0.5
 	
+	velocity = move_vector.normalized() * move_speed * walk_factor
 	
-	translate(move_vector.normalized() * move_speed * delta * walk_factor)
+	move_and_slide()
+	

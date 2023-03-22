@@ -31,6 +31,7 @@ animations = [{
 radius = 18.0
 
 [node name="BeastEyes" type="AnimatedSprite2D"]
+scale = Vector2(0.125, 0.125)
 sprite_frames = SubResource("SpriteFrames_eynei")
 frame_progress = 0.167376
 script = ExtResource("5_xdn2v")

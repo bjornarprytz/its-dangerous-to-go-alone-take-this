@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://deq72o2rf1ikl"]
+[gd_scene load_steps=5 format=3 uid="uid://deq72o2rf1ikl"]
 
 [ext_resource type="Texture2D" uid="uid://jdke5bfxwanf" path="res://sprites/campfire.png" id="1_3hhsw"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_h2av7"]
 [ext_resource type="Script" path="res://main/campfire.gd" id="2_q41kg"]
 
+[sub_resource type="Gradient" id="Gradient_j12r5"]
+offsets = PackedFloat32Array(0, 0.666667, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.666667, 0.666667, 0.666667, 1, 1, 1, 1, 1)
+
 [node name="Campfire" type="Sprite2D"]
-position = Vector2(564, 356)
+scale = Vector2(0.16, 0.16)
 texture = ExtResource("1_3hhsw")
 script = ExtResource("2_q41kg")
 
@@ -20,7 +24,8 @@ direction = Vector2(0, -1)
 gravity = Vector2(0, 0)
 initial_velocity_min = 46.51
 initial_velocity_max = 147.29
-color = Color(0.788235, 0, 0.788235, 1)
+color = Color(0.862745, 0.207843, 0.0392157, 1)
+color_ramp = SubResource("Gradient_j12r5")
 
 [node name="Light" type="PointLight2D" parent="."]
 scale = Vector2(1.1875, 1.1875)
