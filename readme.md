@@ -3,16 +3,16 @@
 - Dialogue sound
 - Casette switch sound
 - Tree sprite + animation
+  - Place on map
 - Player sprite + animation
 - Helper sprite
-- Beast Eyes
-  - Movement (approach player, but shy away)
 - Casette sprite
-- Darkness
-- Lighting
+  - Place on map
 - River tiles
-- Lake + Moon reflection
-- Map layout
+  - Place on map
+- Moon reflection in water
+- Nøkken
+  - Spawn in lakes
 - End game
   - Loss condition
   - Win condition
