@@ -26,7 +26,7 @@ scale = Vector2(0.5625, 0.5625)
 texture = ExtResource("2_kwlkg")
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
-position = Vector2(576, 324)
+position = Vector2(576, 320)
 script = ExtResource("6_oqr6w")
 player = NodePath("../Player")
 
@@ -35,12 +35,13 @@ player = NodePath("../Player")
 [node name="Dialogue" parent="Camera/UI" node_paths=PackedStringArray("hero", "helper", "camera") instance=ExtResource("4_3xw5k")]
 light_mask = 0
 offset_left = 208.0
-offset_top = 475.0
+offset_top = 470.0
 offset_right = 961.0
-offset_bottom = 636.0
+offset_bottom = 631.0
 hero = NodePath("../../../Player")
 helper = NodePath("../../../Helper")
 camera = NodePath("../..")
+metadata/_edit_use_anchors_ = true
 
 [node name="Screen" type="ColorRect" parent="."]
 visible = false
@@ -54,7 +55,6 @@ script = ExtResource("6_cyr2i")
 player = NodePath("../Player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-position = Vector2(576, 324)
 color = Color(0, 0, 0, 1)
 
 [connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="." method="_on_dialogue_dialogue_finished"]
