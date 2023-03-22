@@ -13,7 +13,6 @@
 script = ExtResource("1_qyak7")
 
 [node name="TileMap" parent="." instance=ExtResource("2_6aghd")]
-position = Vector2(-414, -316)
 
 [node name="Campfire" parent="." instance=ExtResource("1_764no")]
 
@@ -47,7 +46,7 @@ camera = NodePath("../..")
 visible = false
 light_mask = 0
 offset_right = 1154.0
-offset_bottom = 648.0
+offset_bottom = 640.0
 color = Color(0, 0.0980392, 0.356863, 1)
 
 [node name="Beasts" type="Node2D" parent="." node_paths=PackedStringArray("player")]

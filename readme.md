@@ -11,6 +11,7 @@
 - Darkness
 - Lighting
 - River tiles
+- Lake + Moon reflection
 - Map layout
 - End game
   - Loss condition

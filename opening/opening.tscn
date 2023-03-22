@@ -55,7 +55,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -1152.0
-offset_bottom = -648.0
+offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rfjhp")
@@ -64,7 +64,7 @@ script = ExtResource("1_rfjhp")
 material = SubResource("ShaderMaterial_eeq7g")
 layout_mode = 2
 offset_right = 1152.0
-offset_bottom = 648.0
+offset_bottom = 640.0
 color = Color(0, 0.105882, 0.105882, 1)
 
 [node name="Moon" type="Sprite2D" parent="."]
@@ -90,8 +90,8 @@ texture = ExtResource("3_fo66x")
 [node name="Clouds" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_bkwkg")
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 1296.0
+offset_right = 1152.0
+offset_bottom = 1280.0
 texture = SubResource("CanvasTexture_hgfnk")
 
 [node name="StartButton" type="TextureButton" parent="."]
