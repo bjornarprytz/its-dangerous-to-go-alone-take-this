@@ -10,7 +10,6 @@
   - Place on map
 - River tiles
   - Place on map
-- Moon reflection in water
 - Nøkken
   - Spawn in lakes
 - End game

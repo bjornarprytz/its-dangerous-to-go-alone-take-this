@@ -57,7 +57,7 @@ script = ExtResource("6_cyr2i")
 player = NodePath("../Player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+color = Color(0.0313726, 0.0313726, 0.0313726, 1)
 
 [connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="." method="_on_dialogue_dialogue_finished"]
 [connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="Beasts" method="_on_dialogue_dialogue_finished"]

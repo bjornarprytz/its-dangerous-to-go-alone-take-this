@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cfecm36ece1c6"]
+[gd_scene load_steps=17 format=3 uid="uid://cfecm36ece1c6"]
 
 [ext_resource type="Texture2D" uid="uid://ctm1br8wttfg6" path="res://sprites/decor_16x16.png" id="1_dfypl"]
 [ext_resource type="Texture2D" uid="uid://dl5uee84e0y4u" path="res://sprites/grass.png" id="2_nt2tn"]
+[ext_resource type="Shader" path="res://main/water_reflection.gdshader" id="3_5ak5c"]
 [ext_resource type="Texture2D" uid="uid://6q538c7byn4x" path="res://sprites/water1.png" id="3_6o66w"]
 [ext_resource type="Texture2D" uid="uid://ip7xul78kbot" path="res://sprites/water_decorations.png" id="4_flf17"]
+[ext_resource type="Texture2D" uid="uid://2i7j3l5nrfw" path="res://sprites/night-sky.png" id="4_udecg"]
 [ext_resource type="Texture2D" uid="uid://yolqk56vn3h7" path="res://sprites/water_lillies.png" id="5_mml5y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fccfm"]
@@ -75,9 +77,24 @@ texture = ExtResource("2_nt2tn")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_7iq5w"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3gfxk"]
+noise = SubResource("FastNoiseLite_7iq5w")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sajjw"]
+shader = ExtResource("3_5ak5c")
+shader_parameter/water_color = Color(0.301961, 0.541176, 0.701961, 1)
+shader_parameter/distortion_scale = Vector2(1, 5)
+shader_parameter/intensity = 0.1
+shader_parameter/speed = 0.02
+shader_parameter/sky_texture = ExtResource("4_udecg")
+shader_parameter/noise = SubResource("NoiseTexture2D_3gfxk")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imkhy"]
 texture = ExtResource("3_6o66w")
 1:0/0 = 0
+1:0/0/material = SubResource("ShaderMaterial_sajjw")
 1:0/0/terrain_set = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -85,6 +102,7 @@ texture = ExtResource("3_6o66w")
 1:0/0/terrains_peering_bit/bottom_right_corner = 0
 1:0/0/terrains_peering_bit/bottom_side = 0
 1:1/0 = 0
+1:1/0/material = SubResource("ShaderMaterial_sajjw")
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -96,6 +114,7 @@ texture = ExtResource("3_6o66w")
 1:1/0/terrains_peering_bit/top_side = 0
 1:1/0/terrains_peering_bit/top_right_corner = 0
 2:1/0 = 0
+2:1/0/material = SubResource("ShaderMaterial_sajjw")
 2:1/0/terrain_set = 0
 2:1/0/terrain = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -110,6 +129,7 @@ texture = ExtResource("3_6o66w")
 2:1/0/terrains_peering_bit/top_side = 0
 2:1/0/terrains_peering_bit/top_right_corner = 0
 2:2/0 = 0
+2:2/0/material = SubResource("ShaderMaterial_sajjw")
 2:2/0/terrain_set = 0
 2:2/0/terrain = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -121,6 +141,7 @@ texture = ExtResource("3_6o66w")
 2:2/0/terrains_peering_bit/top_side = 0
 2:2/0/terrains_peering_bit/top_right_corner = 0
 3:2/0 = 0
+3:2/0/material = SubResource("ShaderMaterial_sajjw")
 3:2/0/terrain_set = 0
 3:2/0/terrain = 0
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -130,6 +151,7 @@ texture = ExtResource("3_6o66w")
 3:2/0/terrains_peering_bit/top_left_corner = 0
 3:2/0/terrains_peering_bit/top_side = 0
 3:1/0 = 0
+3:1/0/material = SubResource("ShaderMaterial_sajjw")
 3:1/0/terrain_set = 0
 3:1/0/terrain = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -141,6 +163,7 @@ texture = ExtResource("3_6o66w")
 3:1/0/terrains_peering_bit/top_left_corner = 0
 3:1/0/terrains_peering_bit/top_side = 0
 3:0/0 = 0
+3:0/0/material = SubResource("ShaderMaterial_sajjw")
 3:0/0/terrain_set = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
@@ -148,6 +171,7 @@ texture = ExtResource("3_6o66w")
 3:0/0/terrains_peering_bit/bottom_side = 0
 3:0/0/terrains_peering_bit/bottom_left_corner = 0
 2:0/0 = 0
+2:0/0/material = SubResource("ShaderMaterial_sajjw")
 2:0/0/terrain_set = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
@@ -156,6 +180,7 @@ texture = ExtResource("3_6o66w")
 2:0/0/terrains_peering_bit/bottom_side = 0
 2:0/0/terrains_peering_bit/bottom_left_corner = 0
 1:2/0 = 0
+1:2/0/material = SubResource("ShaderMaterial_sajjw")
 1:2/0/terrain_set = 0
 1:2/0/terrain = 0
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -165,6 +190,7 @@ texture = ExtResource("3_6o66w")
 1:2/0/terrains_peering_bit/top_side = 0
 1:2/0/terrains_peering_bit/top_right_corner = 0
 4:1/0 = 0
+4:1/0/material = SubResource("ShaderMaterial_sajjw")
 4:1/0/terrain_set = 0
 4:1/0/terrain = 0
 4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -177,6 +203,7 @@ texture = ExtResource("3_6o66w")
 4:1/0/terrains_peering_bit/top_left_corner = 0
 4:1/0/terrains_peering_bit/top_side = 0
 4:0/0 = 0
+4:0/0/material = SubResource("ShaderMaterial_sajjw")
 4:0/0/terrain_set = 0
 4:0/0/terrain = 0
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -190,6 +217,7 @@ texture = ExtResource("3_6o66w")
 4:0/0/terrains_peering_bit/top_side = 0
 4:0/0/terrains_peering_bit/top_right_corner = 0
 5:0/0 = 0
+5:0/0/material = SubResource("ShaderMaterial_sajjw")
 5:0/0/terrain_set = 0
 5:0/0/terrain = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -203,6 +231,7 @@ texture = ExtResource("3_6o66w")
 5:0/0/terrains_peering_bit/top_side = 0
 5:0/0/terrains_peering_bit/top_right_corner = 0
 5:1/0 = 0
+5:1/0/material = SubResource("ShaderMaterial_sajjw")
 5:1/0/terrain_set = 0
 5:1/0/terrain = 0
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
