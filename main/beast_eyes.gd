@@ -19,7 +19,7 @@ func _on_frame_changed() -> void:
 			_set_glow(0.0)
 			_lurch()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if (player_is_too_close):
 		var direction = (position - target.position).normalized()
 	
@@ -41,7 +41,7 @@ func _set_glow(energy: float):
 	$Eye2.energy = energy
 
 
-func _on_safe_space_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+func _on_safe_space_area_shape_entered(_area_rid: RID, area: Area2D, _area_shape_index: int, _local_shape_index: int) -> void:
 	var danger = area.owner
 	
 	if (danger is Player):
@@ -52,7 +52,7 @@ func _on_safe_space_area_shape_entered(area_rid: RID, area: Area2D, area_shape_i
 		to_avoid.push_back(danger)
 
 
-func _on_safe_space_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+func _on_safe_space_area_shape_exited(_area_rid: RID, area: Area2D, _area_shape_index: int, _local_shape_index: int) -> void:
 	var danger = area.owner
 	var danger_idx = to_avoid.find(danger)
 	

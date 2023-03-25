@@ -11,15 +11,16 @@
 
 ## Sprites
 
+- Casette sprite
 - Boomblaster UI element
-  - Animation
+  - Insert casette animation
+  - Running out of tape animation
 - Tree
   - Animation
   - Fix collision
 - Player sprite
   - animation
 - Helper sprite
-- Casette sprite
 - River tiles
 - Nøkken
 
