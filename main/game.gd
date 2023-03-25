@@ -21,5 +21,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		dialogue.next()
 
 func _on_dialogue_dialogue_finished() -> void:
-	AudioPlayer.switch("res://sound/takethis.wav")
+	AudioPlayer.switch("res://sound/takethis_oneminute.wav")
 	$Camera.lock_on_player = true
