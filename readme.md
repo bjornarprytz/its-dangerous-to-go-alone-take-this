@@ -1,17 +1,36 @@
 # TODO
 
-- Dialogue sound
-- Casette switch sound
-- Tree sprite + animation
-  - Place on map
-- Player sprite + animation
-- Helper sprite
-- Casette sprite
-  - Place on map
-- River tiles
-  - Place on map
-- Nøkken
-  - Spawn in lakes
+## Game
+
+- Pick up tape
+- Run out of music
+- Nøkken logic
 - End game
   - Loss condition
   - Win condition
+
+## Sprites
+
+- Tree
+  - Animation
+  - Fix collision
+- Player sprite
+  - animation
+- Helper sprite
+- Casette sprite
+- River tiles
+- Nøkken
+
+## Sound
+
+- Dialogue sound
+- Casette switch sound
+- ++ songs
+
+## Map
+
+- Points of interest
+  - Lake
+  - House with cozy lights on
+  - River
+  - Ancient Overgrown Statue

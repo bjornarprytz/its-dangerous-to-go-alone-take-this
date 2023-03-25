@@ -18,7 +18,8 @@ script = ExtResource("1_qyak7")
 position = Vector2(576, 319)
 
 [node name="Player" parent="." instance=ExtResource("3_etpa8")]
-position = Vector2(557, 331)
+z_index = 1
+position = Vector2(556, 330)
 
 [node name="Helper" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
@@ -57,7 +58,7 @@ script = ExtResource("6_cyr2i")
 player = NodePath("../Player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0313726, 0.0313726, 0.0313726, 1)
+color = Color(0.0117647, 0.0117647, 0.0117647, 1)
 
 [connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="." method="_on_dialogue_dialogue_finished"]
 [connection signal="dialogueFinished" from="Camera/UI/Dialogue" to="Beasts" method="_on_dialogue_dialogue_finished"]

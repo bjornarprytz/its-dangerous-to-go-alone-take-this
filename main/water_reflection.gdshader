@@ -10,12 +10,11 @@ uniform float intensity;
 uniform float speed;
 
 void fragment() {
-	float distortion = texture(noise, UV * distortion_scale + TIME * speed).x;
+	float distortion = texture(noise, SCREEN_UV * distortion_scale + TIME * speed).x;
 	distortion -= .5;
 	distortion *= intensity;
 	
-	float uv_height = SCREEN_PIXEL_SIZE.y / TEXTURE_PIXEL_SIZE.y;
-	vec2 reflected_screenuv = vec2(SCREEN_UV.x - distortion, SCREEN_UV.y + uv_height * UV.y * 2.0);
+	vec2 reflected_screenuv = vec2(SCREEN_UV.x - distortion, SCREEN_UV.y);
 	
 	vec4 reflection = texture(sky_texture, reflected_screenuv);
 	
