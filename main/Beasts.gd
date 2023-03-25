@@ -24,9 +24,9 @@ func _spawn_beasts():
 func _spawn_beast(pos : Vector2):
 	var beast = beast_spawner.instantiate() as AnimatedSprite2D
 	beast.position = pos
-	beast.scale = Vector2.ONE * (randf_range(0.5, 1.5))
+	beast.scale *= Vector2.ONE * (randf_range(0.5, 1.5))
 	beast.speed_scale = randf() + 0.5
-	beast.modulate = Color(randf(), 0, randf())
+	#beast.modulate = Color(randf(), 0, randf())
 	beast.target = player
 	beast.play()
 	add_child(beast)

@@ -11,8 +11,8 @@ default_font_size = 24
 [node name="Dialogue" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 753.0
-offset_bottom = 161.0
+offset_right = 150.0
+offset_bottom = 32.0
 script = ExtResource("1_4rwps")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -22,6 +22,10 @@ anchor_left = -0.02
 anchor_top = -0.05
 anchor_right = 1.0
 anchor_bottom = 1.05
+offset_left = 6.18
+offset_top = 3.3
+offset_right = 6.17999
+offset_bottom = 3.3
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.12549)
@@ -49,6 +53,6 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 
 [node name="Speaking" type="Sprite2D" parent="HBox/Container"]
-position = Vector2(79.5, 79.5)
-scale = Vector2(1.22656, 1.22656)
+position = Vector2(92, 36)
+scale = Vector2(0.546875, 0.546875)
 texture = ExtResource("2_e3dcg")

@@ -27,8 +27,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bmkda"]
-radius = 18.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tuc28"]
+radius = 5.0
 
 [node name="BeastEyes" type="AnimatedSprite2D"]
 scale = Vector2(0.125, 0.125)
@@ -49,7 +49,9 @@ texture = ExtResource("5_k0gpa")
 [node name="SafeSpace" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SafeSpace"]
-shape = SubResource("CircleShape2D_bmkda")
+position = Vector2(0, -1)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_tuc28")
 
 [connection signal="frame_changed" from="." to="." method="_on_frame_changed"]
 [connection signal="area_shape_entered" from="SafeSpace" to="." method="_on_safe_space_area_shape_entered"]
