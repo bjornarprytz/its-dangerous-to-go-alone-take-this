@@ -12,14 +12,15 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qyak7")
 
-[node name="TileMap" parent="." instance=ExtResource("2_6aghd")]
+[node name="TileMap" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_6aghd")]
+camera = NodePath("../Camera")
 
 [node name="Campfire" parent="." instance=ExtResource("1_764no")]
 position = Vector2(576, 319)
 
 [node name="Player" parent="." instance=ExtResource("3_etpa8")]
 z_index = 1
-position = Vector2(556, 330)
+position = Vector2(-185, 786)
 
 [node name="Helper" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)

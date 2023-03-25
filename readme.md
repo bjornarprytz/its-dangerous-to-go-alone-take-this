@@ -11,6 +11,8 @@
 
 ## Sprites
 
+- Boomblaster UI element
+  - Animation
 - Tree
   - Animation
   - Fix collision
