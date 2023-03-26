@@ -23,6 +23,7 @@ EventBus="*res://event_bus.gd"
 [display]
 
 window/size/viewport_height=640
+window/size/resizable=false
 
 [dotnet]
 

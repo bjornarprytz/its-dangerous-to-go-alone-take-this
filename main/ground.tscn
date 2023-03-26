@@ -1,13 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://cfecm36ece1c6"]
+[gd_scene load_steps=16 format=3 uid="uid://dxqyjr781esx4"]
 
 [ext_resource type="Texture2D" uid="uid://ctm1br8wttfg6" path="res://sprites/decor_16x16.png" id="1_dfypl"]
 [ext_resource type="Script" path="res://main/ground.gd" id="1_i76s4"]
 [ext_resource type="Texture2D" uid="uid://dl5uee84e0y4u" path="res://sprites/grass.png" id="2_nt2tn"]
 [ext_resource type="Texture2D" uid="uid://6q538c7byn4x" path="res://sprites/water1.png" id="3_6o66w"]
 [ext_resource type="Texture2D" uid="uid://ip7xul78kbot" path="res://sprites/water_decorations.png" id="4_flf17"]
-[ext_resource type="Material" uid="uid://b1d1jqs4rp6gr" path="res://main/water_reflection_shader_material.tres" id="4_vaidq"]
+[ext_resource type="Material" path="res://main/water_reflection_shader_material.tres" id="4_vaidq"]
 [ext_resource type="Texture2D" uid="uid://yolqk56vn3h7" path="res://sprites/water_lillies.png" id="5_mml5y"]
-[ext_resource type="PackedScene" uid="uid://bptsynmru8f7o" path="res://main/pine.tscn" id="8_4mu1o"]
+[ext_resource type="PackedScene" path="res://main/pine.tscn" id="8_4mu1o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fccfm"]
 texture = ExtResource("1_dfypl")

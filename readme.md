@@ -2,7 +2,6 @@
 
 ## Game
 
-- Lock resolution
 - Pick up tape
 - Run out of music
 - Beasts follw fast when outside view

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://deq72o2rf1ikl"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Texture2D" uid="uid://jdke5bfxwanf" path="res://sprites/campfire.png" id="1_3hhsw"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_h2av7"]

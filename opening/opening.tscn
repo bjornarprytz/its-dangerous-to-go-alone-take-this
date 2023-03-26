@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d1edb27f6igjg"]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Shader" path="res://opening/gradient.gdshader" id="1_jv2dx"]
 [ext_resource type="Script" path="res://opening/opening.gd" id="1_rfjhp"]

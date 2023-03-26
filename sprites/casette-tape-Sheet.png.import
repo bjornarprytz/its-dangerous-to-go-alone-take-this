@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buvj84yn154pf"
-path="res://.godot/imported/boomblaster.png-0d392b2ddbd4c45a3a86f72aaf4bd84b.ctex"
+uid="uid://d0533qwe53nlv"
+path="res://.godot/imported/casette-tape-Sheet.png-e14cdd0e7b33748f18a29ac2a99984fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main/boomblaster.png"
-dest_files=["res://.godot/imported/boomblaster.png-0d392b2ddbd4c45a3a86f72aaf4bd84b.ctex"]
+source_file="res://sprites/casette-tape-Sheet.png"
+dest_files=["res://.godot/imported/casette-tape-Sheet.png-e14cdd0e7b33748f18a29ac2a99984fe.ctex"]
 
 [params]
 
