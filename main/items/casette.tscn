@@ -1,8 +1,8 @@
-[gd_scene load_steps=81 format=3 uid="uid://dvkstksgwgmfo"]
+[gd_scene load_steps=82 format=3 uid="uid://dvkstksgwgmfo"]
 
 [ext_resource type="Texture2D" uid="uid://d0533qwe53nlv" path="res://sprites/casette-tape-Sheet.png" id="1_71a88"]
 [ext_resource type="Script" path="res://main/items/casette.gd" id="1_fgxc6"]
-[ext_resource type="Theme" uid="uid://bwnogkfl7hyjd" path="res://main/text_theme.tres" id="2_3dc6b"]
+[ext_resource type="FontFile" uid="uid://cykh3afyv4h23" path="res://font/PressStart2P-Regular.ttf" id="3_3p5wo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_etvcq"]
 atlas = ExtResource("1_71a88")
@@ -544,6 +544,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Theme" id="Theme_h5v02"]
+default_font = ExtResource("3_3p5wo")
+default_font_size = 128
+
 [node name="Casette" type="Node2D"]
 script = ExtResource("1_fgxc6")
 
@@ -566,5 +570,5 @@ offset_top = 9.0
 offset_right = 1641.0
 offset_bottom = 153.0
 scale = Vector2(0.04, 0.04)
-theme = ExtResource("2_3dc6b")
+theme = SubResource("Theme_h5v02")
 text = "Mix Tape #7"

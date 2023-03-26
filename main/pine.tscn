@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://mccurffsu1gy"]
 
 [ext_resource type="Texture2D" uid="uid://b5xkqft1t5oc4" path="res://sprites/pine-top.png" id="1_togap"]
 [ext_resource type="Texture2D" uid="uid://di2cn3xak6txr" path="res://sprites/pine-bottom.png" id="2_wltnw"]
@@ -11,17 +11,17 @@ height = 28.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 2
+position = Vector2(0, -16)
 texture = ExtResource("1_togap")
-centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(0, 32)
+position = Vector2(0, 8)
 texture = ExtResource("2_wltnw")
-centered = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(17, 32)
+position = Vector2(0, 16)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_au0pc")

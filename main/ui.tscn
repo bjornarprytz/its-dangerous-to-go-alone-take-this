@@ -10,14 +10,27 @@ script = ExtResource("1_y6fbk")
 [node name="Dialogue" parent="." instance=ExtResource("1_icuer")]
 light_mask = 0
 anchors_preset = -1
-anchor_left = -0.528646
-anchor_top = -0.046875
-anchor_right = -0.528646
-anchor_bottom = -0.046875
-offset_left = 726.0
-offset_top = 495.0
-offset_right = 1479.0
-offset_bottom = 656.0
+anchor_left = 0.500434
+anchor_top = 1.0
+anchor_right = 0.500434
+anchor_bottom = 1.0
+offset_left = -376.5
+offset_top = -130.0
+offset_right = 376.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Inventory" parent="." instance=ExtResource("2_shbnv")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -524.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0

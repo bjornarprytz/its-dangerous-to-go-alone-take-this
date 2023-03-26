@@ -12,7 +12,6 @@
 
 ## Sprites
 
-- Casette sprite
 - Boomblaster UI element
   - Insert casette animation
   - Running out of tape animation

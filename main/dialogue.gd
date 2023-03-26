@@ -34,7 +34,21 @@ var lines = [
 	{
 		"words": "...",
 		"speaker": SPEAKER.Hero
+	},
+	{
+		"words": "Don't worry though! There are several mix tapes scattered around the woods, and I found you one of them!",
+		"speaker": SPEAKER.Helper
+	},
+	{
+		"words": "You might actually survive getting through the forest if you find them all, heh.",
+		"speaker": SPEAKER.Helper,
+		"event": 
+		{
+			"emitter": EventBus.get_item,
+			"arg": preload("res://main/items/casette_ui.tscn")
+		}
 	}
+	
 ]
 
 @onready var words : RichTextLabel = $HBox/Words
