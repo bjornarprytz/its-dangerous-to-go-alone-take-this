@@ -3,9 +3,9 @@ class_name Dialogue
 
 signal dialogueFinished
 
-@export var hero: Node2D
-@export var helper: Node2D
-@export var camera: Node2D
+var hero: Node2D
+var helper: Node2D
+var camera: Node2D
 
 enum SPEAKER {
 	Same,
@@ -20,7 +20,12 @@ var lines = [
 	},
 	{
 		"words": "Thanks man!",
-		"speaker": SPEAKER.Hero
+		"speaker": SPEAKER.Hero,
+		"event": 
+		{
+			"emitter": EventBus.get_item,
+			"arg": preload("res://main/items/boomblaster.tscn")
+		}
 	},
 	{
 		"words": "Don't thank me yet... it has no rewind button... heh :sweat_smile:",
@@ -31,8 +36,6 @@ var lines = [
 		"speaker": SPEAKER.Hero
 	}
 ]
-
-
 
 @onready var words : RichTextLabel = $HBox/Words
 @onready var speaker : Sprite2D = $HBox/Container/Speaking
@@ -51,6 +54,8 @@ func next():
 	else:
 		var line = lines[_current_line]
 		_speak(line["words"], line["speaker"])
+		if ("event" in line):
+			line["event"]["emitter"].emit(line["event"]["arg"])
 		_current_line += 1
 		
 

@@ -2,8 +2,10 @@
 
 ## Game
 
+- Lock resolution
 - Pick up tape
 - Run out of music
+- Beasts follw fast when outside view
 - Nøkken logic
 - End game
   - Loss condition
@@ -15,14 +17,14 @@
 - Boomblaster UI element
   - Insert casette animation
   - Running out of tape animation
-- Tree
-  - Animation
-  - Fix collision
 - Player sprite
   - animation
 - Helper sprite
 - River tiles
 - Nøkken
+- Tree
+  - Animation
+  - Fix collision
 
 ## Sound
 

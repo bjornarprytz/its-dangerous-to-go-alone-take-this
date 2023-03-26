@@ -32,3 +32,8 @@ input_pickable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Light/RepellantArea"]
 shape = SubResource("CircleShape2D_ia6y7")
+
+[node name="InnerLight" type="PointLight2D" parent="Player"]
+scale = Vector2(2.3125, 2.3125)
+energy = 0.69
+texture = ExtResource("3_l22if")

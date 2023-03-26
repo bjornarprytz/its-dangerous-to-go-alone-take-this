@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://dlmwhi7qxujkw"]
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://b1d1jqs4rp6gr"]
 
 [ext_resource type="Shader" path="res://main/water_reflection.gdshader" id="1_87n5i"]
 [ext_resource type="Texture2D" uid="uid://2i7j3l5nrfw" path="res://sprites/night-sky.png" id="2_q5o2e"]
