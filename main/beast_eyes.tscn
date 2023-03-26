@@ -33,8 +33,7 @@ radius = 5.0
 [node name="BeastEyes" type="AnimatedSprite2D"]
 scale = Vector2(0.125, 0.125)
 sprite_frames = SubResource("SpriteFrames_eynei")
-frame = 2
-frame_progress = 0.603015
+frame_progress = 0.975874
 script = ExtResource("5_xdn2v")
 
 [node name="Eye1" type="PointLight2D" parent="."]

@@ -1,12 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c78xt0getueay"]
+[gd_scene load_steps=4 format=3 uid="uid://c78xt0getueay"]
 
-[ext_resource type="FontFile" uid="uid://cykh3afyv4h23" path="res://font/PressStart2P-Regular.ttf" id="1_1btuv"]
 [ext_resource type="Script" path="res://main/dialogue.gd" id="1_4rwps"]
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="2_e3dcg"]
-
-[sub_resource type="Theme" id="Theme_kttiy"]
-default_font = ExtResource("1_1btuv")
-default_font_size = 24
+[ext_resource type="Theme" uid="uid://bwnogkfl7hyjd" path="res://main/text_theme.tres" id="2_y1eax"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -22,10 +18,10 @@ anchor_left = -0.02
 anchor_top = -0.05
 anchor_right = 1.0
 anchor_bottom = 1.05
-offset_left = 6.18
-offset_top = 3.3
-offset_right = 6.17999
-offset_bottom = 3.3
+offset_left = 3.0
+offset_top = 1.6
+offset_right = 3.0
+offset_bottom = 1.6
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.12549)
@@ -44,7 +40,7 @@ layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 7.0
-theme = SubResource("Theme_kttiy")
+theme = ExtResource("2_y1eax")
 fit_content = true
 
 [node name="Container" type="Control" parent="HBox"]
