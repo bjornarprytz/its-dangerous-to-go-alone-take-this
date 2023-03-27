@@ -1,27 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://mccurffsu1gy"]
+[gd_scene load_steps=6 format=3 uid="uid://mccurffsu1gy"]
 
+[ext_resource type="Script" path="res://main/pine.gd" id="1_dsbaf"]
 [ext_resource type="Texture2D" uid="uid://b5xkqft1t5oc4" path="res://sprites/pine-top.png" id="1_togap"]
 [ext_resource type="Texture2D" uid="uid://di2cn3xak6txr" path="res://sprites/pine-bottom.png" id="2_wltnw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au0pc"]
-radius = 9.0
-height = 28.0
+radius = 3.0
+height = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kq7ua"]
+radius = 12.0
 
 [node name="pine" type="Node2D"]
+position = Vector2(0, -8)
+script = ExtResource("1_dsbaf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 2
-position = Vector2(0, -16)
+position = Vector2(0, -20)
 texture = ExtResource("1_togap")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(0, 4)
 texture = ExtResource("2_wltnw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 16)
-rotation = 1.5708
+position = Vector2(0, 21)
 shape = SubResource("CapsuleShape2D_au0pc")
+
+[node name="Area2D" type="Area2D" parent="."]
+gravity_space_override = 3
+gravity_point = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_kq7ua")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

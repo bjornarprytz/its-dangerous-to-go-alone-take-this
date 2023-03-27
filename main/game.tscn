@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://main/game.gd" id="1_qyak7"]
 [ext_resource type="PackedScene" uid="uid://dxqyjr781esx4" path="res://main/ground.tscn" id="2_6aghd"]
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="2_kwlkg"]
-[ext_resource type="PackedScene" path="res://main/player.tscn" id="3_etpa8"]
+[ext_resource type="PackedScene" uid="uid://cc2vx4mu216s" path="res://main/player.tscn" id="3_etpa8"]
 [ext_resource type="Script" path="res://main/Beasts.gd" id="6_cyr2i"]
 [ext_resource type="Script" path="res://main/camera.gd" id="6_oqr6w"]
 [ext_resource type="PackedScene" uid="uid://cmu4bn2qonhxf" path="res://main/ui.tscn" id="7_ykrt2"]
