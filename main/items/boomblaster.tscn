@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqn3e3pcn5f2f"]
+[gd_scene load_steps=4 format=3 uid="uid://co1jy14iewjav"]
 
 [ext_resource type="Texture2D" uid="uid://b6e1y0ido1va8" path="res://sprites/boomblaster.png" id="1_csink"]
 [ext_resource type="Script" path="res://main/items/boomblaster.gd" id="2_8skhx"]

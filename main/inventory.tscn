@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg30l1dwomg3t"]
+[gd_scene load_steps=2 format=3 uid="uid://cysgvxt7eoav"]
 
 [ext_resource type="Script" path="res://main/inventory.gd" id="1_dhye3"]
 
@@ -12,7 +12,7 @@ offset_bottom = 631.0
 script = ExtResource("1_dhye3")
 
 [node name="VBox" type="VBoxContainer" parent="."]
-layout_direction = 2
+layout_direction = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -23,8 +23,7 @@ var lines = [
 		"speaker": SPEAKER.Hero,
 		"event": 
 		{
-			"emitter": EventBus.get_item,
-			"arg": preload("res://main/items/boomblaster.tscn")
+			"emitter": EventBus.get_boomblaster
 		}
 	},
 	{
@@ -44,8 +43,8 @@ var lines = [
 		"speaker": SPEAKER.Helper,
 		"event": 
 		{
-			"emitter": EventBus.get_item,
-			"arg": preload("res://main/items/casette_ui.tscn")
+			"emitter": EventBus.get_casette,
+			"arg": CasetteData.Create(Color.BLUE, "Mix tape #7")
 		}
 	}
 	
@@ -69,7 +68,10 @@ func next():
 		var line = lines[_current_line]
 		_speak(line["words"], line["speaker"])
 		if ("event" in line):
-			line["event"]["emitter"].emit(line["event"]["arg"])
+			if ("arg" in line["event"]):
+				line["event"]["emitter"].emit(line["event"]["arg"])
+			else:
+				line["event"]["emitter"].emit()
 		_current_line += 1
 		
 
