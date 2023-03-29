@@ -54,7 +54,7 @@ func _on_safe_space_area_shape_entered(_area_rid: RID, area: Area2D, _area_shape
 		player_is_too_close = true
 		frame = 2
 		pause()
-	elif (danger is Beast or danger is Fire and to_avoid.find(danger) == -1):
+	elif (danger is Beast or danger is Campfire and to_avoid.find(danger) == -1):
 		to_avoid.push_back(danger)
 
 

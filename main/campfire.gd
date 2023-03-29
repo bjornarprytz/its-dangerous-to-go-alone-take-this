@@ -1,5 +1,5 @@
 extends Sprite2D
-class_name Fire
+class_name Campfire
 
 
 var _total_time : float = 0.0

@@ -1,21 +1,46 @@
-[gd_scene load_steps=13 format=3 uid="uid://bto1hxpc0pp8u"]
+[gd_scene load_steps=18 format=3 uid="uid://bto1hxpc0pp8u"]
 
-[ext_resource type="PackedScene" uid="uid://deq72o2rf1ikl" path="res://main/campfire.tscn" id="1_764no"]
+[ext_resource type="PackedScene" uid="uid://xi4ueye5fjns" path="res://main/campfire.tscn" id="1_764no"]
 [ext_resource type="Script" path="res://main/game.gd" id="1_qyak7"]
 [ext_resource type="PackedScene" uid="uid://dxqyjr781esx4" path="res://main/ground.tscn" id="2_6aghd"]
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="2_kwlkg"]
-[ext_resource type="PackedScene" uid="uid://cdq57dqyn4w41" path="res://main/player.tscn" id="3_etpa8"]
+[ext_resource type="PackedScene" uid="uid://cc2vx4mu216s" path="res://main/player.tscn" id="3_etpa8"]
 [ext_resource type="Script" path="res://main/Beasts.gd" id="6_cyr2i"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="6_hwh1u"]
 [ext_resource type="Script" path="res://main/camera.gd" id="6_oqr6w"]
-[ext_resource type="PackedScene" uid="uid://q8s8u8wra261" path="res://main/ui.tscn" id="7_ykrt2"]
-[ext_resource type="PackedScene" uid="uid://bmkhjlxw8mkee" path="res://main/items/casette_pickup.tscn" id="10_2byfm"]
+[ext_resource type="PackedScene" uid="uid://cmu4bn2qonhxf" path="res://main/ui.tscn" id="7_ykrt2"]
+[ext_resource type="PackedScene" uid="uid://bd8t85ak3tamk" path="res://main/items/casette_pickup.tscn" id="10_2byfm"]
 [ext_resource type="Script" path="res://main/items/casette_data.gd" id="11_lye8l"]
 
 [sub_resource type="Resource" id="Resource_8jsns"]
 script = ExtResource("11_lye8l")
-color = Color(0.745098, 0, 0, 1)
+color = Color(0, 0.568627, 0.435294, 1)
+label = "Mix Tape #1"
+
+[sub_resource type="Resource" id="Resource_k2unf"]
+script = ExtResource("11_lye8l")
+color = Color(0.835294, 0.376471, 0.223529, 1)
+label = "Mix Tape #2"
+
+[sub_resource type="Resource" id="Resource_ao2ii"]
+script = ExtResource("11_lye8l")
+color = Color(0.278431, 0.54902, 0.847059, 1)
+label = "Mix Tape #3"
+
+[sub_resource type="Resource" id="Resource_jcfb1"]
+script = ExtResource("11_lye8l")
+color = Color(0.745098, 0, 0.917647, 1)
+label = "Mix Tape #4"
+
+[sub_resource type="Resource" id="Resource_q34wq"]
+script = ExtResource("11_lye8l")
+color = Color(0.286275, 0.105882, 0.909804, 1)
 label = "Mix Tape #5"
+
+[sub_resource type="Resource" id="Resource_g0rdg"]
+script = ExtResource("11_lye8l")
+color = Color(0, 0, 0, 1)
+label = "Mix Tape #6"
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qyak7")
@@ -57,9 +82,29 @@ player = NodePath("../Player")
 
 [node name="Casettes" type="Node2D" parent="."]
 
-[node name="CasettePickup" parent="Casettes" instance=ExtResource("10_2byfm")]
-position = Vector2(505, 282)
+[node name="Casette1" parent="Casettes" instance=ExtResource("10_2byfm")]
+position = Vector2(-201, 732)
 casette_data = SubResource("Resource_8jsns")
+
+[node name="Casette2" parent="Casettes" instance=ExtResource("10_2byfm")]
+position = Vector2(1581, 479)
+casette_data = SubResource("Resource_k2unf")
+
+[node name="Casette3" parent="Casettes" instance=ExtResource("10_2byfm")]
+position = Vector2(1039, 216)
+casette_data = SubResource("Resource_ao2ii")
+
+[node name="Casette4" parent="Casettes" instance=ExtResource("10_2byfm")]
+position = Vector2(989, -182)
+casette_data = SubResource("Resource_jcfb1")
+
+[node name="Casette5" parent="Casettes" instance=ExtResource("10_2byfm")]
+position = Vector2(-276, -14)
+casette_data = SubResource("Resource_q34wq")
+
+[node name="Casette6" parent="Casettes" instance=ExtResource("10_2byfm")]
+position = Vector2(190, -201)
+casette_data = SubResource("Resource_g0rdg")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.0117647, 0.0117647, 0.0117647, 1)
