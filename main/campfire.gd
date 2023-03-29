@@ -1,4 +1,5 @@
 extends Sprite2D
+class_name Fire
 
 
 var _total_time : float = 0.0

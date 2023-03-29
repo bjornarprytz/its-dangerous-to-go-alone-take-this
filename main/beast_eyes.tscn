@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdctqne8efkkt"]
+[gd_scene load_steps=9 format=3 uid="uid://doboifp4icdp4"]
 
 [ext_resource type="Texture2D" uid="uid://xnik6s6b820t" path="res://sprites/blink/eye blink1.png" id="1_iwe6c"]
 [ext_resource type="Texture2D" uid="uid://qstomwb0f6nj" path="res://sprites/blink/eye blink2.png" id="2_knbil"]
@@ -31,7 +31,7 @@ animations = [{
 radius = 5.0
 
 [node name="BeastEyes" type="AnimatedSprite2D"]
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_eynei")
 frame_progress = 0.975874
 script = ExtResource("5_xdn2v")

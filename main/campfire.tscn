@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://deq72o2rf1ikl"]
 
 [ext_resource type="Texture2D" uid="uid://jdke5bfxwanf" path="res://sprites/campfire.png" id="1_3hhsw"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_h2av7"]
@@ -7,6 +7,9 @@
 [sub_resource type="Gradient" id="Gradient_j12r5"]
 offsets = PackedFloat32Array(0, 0.666667, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.666667, 0.666667, 0.666667, 1, 1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eq17d"]
+radius = 406.25
 
 [node name="Campfire" type="Sprite2D"]
 scale = Vector2(0.16, 0.16)
@@ -31,3 +34,8 @@ color_ramp = SubResource("Gradient_j12r5")
 scale = Vector2(1.1875, 1.1875)
 energy = 0.6
 texture = ExtResource("2_h2av7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_eq17d")

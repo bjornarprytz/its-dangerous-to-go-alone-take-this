@@ -2,9 +2,7 @@
 
 ## Game
 
-- Pick up tape
 - Run out of music
-- Beasts follw fast when outside view
 - Nøkken logic
 - End game
   - Loss condition

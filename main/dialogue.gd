@@ -1,8 +1,6 @@
 extends Control
 class_name Dialogue
 
-signal dialogueFinished
-
 var hero: Node2D
 var helper: Node2D
 var camera: Node2D
@@ -62,7 +60,7 @@ func next():
 	if (!_done_speaking):
 		_faster()
 	elif (_current_line == lines.size()):
-		dialogueFinished.emit()
+		EventBus.dialogue_finished.emit()
 		queue_free()
 	else:
 		var line = lines[_current_line]

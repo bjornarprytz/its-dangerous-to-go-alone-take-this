@@ -5,6 +5,7 @@ var beast_spawner = preload("res://main/beast_eyes.tscn")
 
 func _ready() -> void:
 	assert(player)
+	EventBus.dialogue_finished.connect(_spawn_beasts)
 
 func _spawn_beasts():
 	var screen_size = get_viewport_rect().size
@@ -30,7 +31,3 @@ func _spawn_beast(pos : Vector2):
 	beast.target = player
 	beast.play()
 	add_child(beast)
-
-
-func _on_dialogue_dialogue_finished() -> void:
-	_spawn_beasts()

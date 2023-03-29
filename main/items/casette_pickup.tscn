@@ -22,11 +22,6 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(45, 25.5)
 shape = SubResource("RectangleShape2D_3lyrp")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(9.00006, 6.00006)
-scale = Vector2(0.195313, 0.195313)
-texture = ExtResource("2_bv1eb")
-
 [node name="Shadow" type="PointLight2D" parent="."]
 show_behind_parent = true
 position = Vector2(9, 12)

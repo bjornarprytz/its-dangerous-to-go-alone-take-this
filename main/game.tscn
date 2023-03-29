@@ -27,8 +27,7 @@ camera = NodePath("../Camera")
 position = Vector2(576, 319)
 
 [node name="Player" parent="." instance=ExtResource("3_etpa8")]
-z_index = 1
-position = Vector2(557, 331)
+position = Vector2(554, 330)
 
 [node name="Helper" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
@@ -52,22 +51,23 @@ hero = NodePath("../../Player")
 helper = NodePath("../../Helper")
 camera = NodePath("..")
 
-[node name="Screen" type="ColorRect" parent="."]
-visible = false
-light_mask = 0
-offset_right = 1154.0
-offset_bottom = 640.0
-color = Color(0, 0.0980392, 0.356863, 1)
-
 [node name="Beasts" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 script = ExtResource("6_cyr2i")
 player = NodePath("../Player")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0117647, 0.0117647, 0.0117647, 1)
 
 [node name="Casettes" type="Node2D" parent="."]
 
 [node name="CasettePickup" parent="Casettes" instance=ExtResource("10_2byfm")]
 position = Vector2(505, 282)
 casette_data = SubResource("Resource_8jsns")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0117647, 0.0117647, 0.0117647, 1)
+
+[node name="Screen" type="ColorRect" parent="."]
+visible = false
+light_mask = 0
+z_index = 69
+offset_right = 1154.0
+offset_bottom = 640.0
+color = Color(0, 0.0980392, 0.356863, 1)
