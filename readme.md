@@ -5,7 +5,7 @@
 - Run out of music
 - End game
   - Loss condition (Eaten by beasts)
-  - Win Event
+  - Win Screen
 
 ## Sprites
 

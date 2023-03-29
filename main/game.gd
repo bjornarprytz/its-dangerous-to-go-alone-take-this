@@ -29,7 +29,6 @@ func _on_dialogue_finished() -> void:
 
 func _on_casette_pickup(_data: CasetteData) -> void:
 	casettes_left -= 1
-	print("Casettes left: ", casettes_left)
-	
+		
 	if (casettes_left == 0):
-		print("Game win!")
+		AudioPlayer.switch("res://sound/end_temp.wav")
