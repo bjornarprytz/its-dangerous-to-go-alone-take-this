@@ -11,7 +11,7 @@ size = Vector2(90, 49)
 script = ExtResource("1_mkkd4")
 
 [node name="Casette" parent="." instance=ExtResource("1_blb2m")]
-position = Vector2(6.29425e-05, -1.92425)
+position = Vector2(6.29425e-05, -0.035815)
 scale = Vector2(0.2, 0.2)
 
 [node name="Area2D" type="Area2D" parent="."]

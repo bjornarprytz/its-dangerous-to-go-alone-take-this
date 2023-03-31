@@ -6,7 +6,7 @@ func _ready() -> void:
 func node():
 	return self
 
-func switch(file_path : String):
+func switch(music : Resource):
 	stop()
-	stream = load(file_path)
+	stream = music
 	play()

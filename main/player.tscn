@@ -8,7 +8,7 @@
 size = Vector2(16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ia6y7"]
-radius = 180.941
+radius = 226.117
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("2_soykt")

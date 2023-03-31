@@ -42,7 +42,7 @@ var lines = [
 		"event": 
 		{
 			"emitter": EventBus.get_casette,
-			"arg": CasetteData.Create(Color.BLUE, "Mix tape #7")
+			"arg": CasetteData.Create(Color.BLUE, "Mix tape #7", preload("res://sound/takethis_oneminute.wav"))
 		}
 	}
 	
