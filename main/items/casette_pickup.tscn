@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd8t85ak3tamk"]
 
-[ext_resource type="PackedScene" uid="uid://dvkstksgwgmfo" path="res://main/items/casette.tscn" id="1_blb2m"]
+[ext_resource type="PackedScene" uid="uid://d8sldmkwc1dq" path="res://main/items/casette.tscn" id="1_blb2m"]
 [ext_resource type="Script" path="res://main/items/casette_pickup.gd" id="1_mkkd4"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_bv1eb"]
 
@@ -11,7 +11,7 @@ size = Vector2(90, 49)
 script = ExtResource("1_mkkd4")
 
 [node name="Casette" parent="." instance=ExtResource("1_blb2m")]
-position = Vector2(6.29425e-05, -0.035815)
+position = Vector2(6.29425e-05, -1.38861)
 scale = Vector2(0.2, 0.2)
 
 [node name="Area2D" type="Area2D" parent="."]

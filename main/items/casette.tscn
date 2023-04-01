@@ -541,7 +541,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="Theme" id="Theme_h5v02"]

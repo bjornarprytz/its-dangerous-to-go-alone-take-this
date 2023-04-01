@@ -3,10 +3,10 @@ class_name CasetteData
 
 @export var color : Color
 @export var label : String
-@export var music : Resource
+@export var music : AudioStream
 
 
-static func Create(c: Color, l: String, m: Resource) -> CasetteData:
+static func Create(c: Color, l: String, m: AudioStream) -> CasetteData:
 	var data = CasetteData.new()
 	data.color = c
 	data.label = l

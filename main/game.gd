@@ -4,7 +4,9 @@ extends Node2D
 
 @onready var casettes_left = $Casettes.get_child_count() + 1 # +1 is the casette you get from the helper
 
-@onready var end_music = preload("res://sound/end_temp.wav")
+@onready var end_music : CasetteData = CasetteData.Create(Color.ANTIQUE_WHITE, "End Credits", preload("res://sound/end_temp.wav"))
+
+var _first_casette : CasetteData = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,10 +29,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_dialogue_finished() -> void:
 	$Camera.lock_on_player = true
+	assert(_first_casette)
+	
+	AudioPlayer.switch(_first_casette)
 
-func _on_casette_pickup(_data: CasetteData) -> void:
+func _on_casette_pickup(casette_data: CasetteData) -> void:
 	casettes_left -= 1
-	AudioPlayer.switch(_data.music)
+	
+	if (!_first_casette):
+		_first_casette = casette_data
 	
 	if (casettes_left == 0):
 		AudioPlayer.switch(end_music)
