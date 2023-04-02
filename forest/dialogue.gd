@@ -1,10 +1,6 @@
 extends Control
 class_name Dialogue
 
-var hero: Node2D
-var helper: Node2D
-var camera: Node2D
-
 enum SPEAKER {
 	Same,
 	Hero,
@@ -21,7 +17,7 @@ var lines = [
 		"speaker": SPEAKER.Hero,
 		"event": 
 		{
-			"emitter": EventBus.get_boomblaster
+			"emitter": Game.get_boomblaster
 		}
 	},
 	{
@@ -41,7 +37,7 @@ var lines = [
 		"speaker": SPEAKER.Helper,
 		"event": 
 		{
-			"emitter": EventBus.get_casette,
+			"emitter": Game.get_casette,
 			"arg": CasetteData.Create(Color.BLUE, "Mix tape #7", preload("res://sound/takethis_oneminute.wav"))
 		}
 	}
@@ -60,7 +56,7 @@ func next():
 	if (!_done_speaking):
 		_faster()
 	elif (_current_line == lines.size()):
-		EventBus.dialogue_finished.emit()
+		Game.dialogue_finished.emit()
 		queue_free()
 	else:
 		var line = lines[_current_line]
@@ -71,15 +67,12 @@ func next():
 			else:
 				line["event"]["emitter"].emit()
 		_current_line += 1
-		
 
 func _speak(what: String,  who: SPEAKER=SPEAKER.Same):
 	if (who == SPEAKER.Helper):
 		speaker.modulate = Color.YELLOW
 	if (who == SPEAKER.Hero):
 		speaker.modulate = Color.BLUE
-		
-	_focus_speaker(who)
 	
 	words.visible_ratio = 0.0
 	_done_speaking = false
@@ -98,15 +91,3 @@ func _faster():
 		_tween.kill()
 	_done_speaking = true
 	words.visible_ratio = 1.0
-
-func _focus_speaker(character: SPEAKER):
-	if (_camera_tween != null):
-		_camera_tween.kill()
-	
-	_camera_tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
-	if (character == SPEAKER.Helper):
-		_camera_tween.tween_property(camera, 'position', helper.position, 1.0)
-	else:
-		_camera_tween.tween_property(camera, 'position', hero.position, 1.0)
-	
-	await _camera_tween.finished

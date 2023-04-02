@@ -4,15 +4,16 @@
 [ext_resource type="PackedScene" path="res://forest/campfire.tscn" id="2_n2t57"]
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="3_dn8ur"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="4_ccbnn"]
-[ext_resource type="PackedScene" path="res://camera.tscn" id="5_gv1va"]
+[ext_resource type="PackedScene" uid="uid://ckwvb26rdq8ha" path="res://camera.tscn" id="5_gv1va"]
 [ext_resource type="Script" path="res://forest/Beasts.gd" id="6_iq5cw"]
-[ext_resource type="PackedScene" path="res://forest/ground.tscn" id="7_oksvw"]
+[ext_resource type="PackedScene" uid="uid://c6y1hduk4a5t" path="res://forest/ground.tscn" id="7_oksvw"]
 [ext_resource type="PackedScene" path="res://forest/player.tscn" id="8_wv2ue"]
 
 [node name="Forest" type="Node2D"]
 script = ExtResource("1_2re4k")
 
-[node name="Map" parent="." instance=ExtResource("7_oksvw")]
+[node name="Map" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("7_oksvw")]
+camera = NodePath("../Camera")
 
 [node name="Campfire" parent="." instance=ExtResource("2_n2t57")]
 position = Vector2(144, 79)
@@ -38,4 +39,5 @@ player = NodePath("../Player")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.12549, 0.12549, 0.12549, 1)
 
-[node name="Camera" parent="." instance=ExtResource("5_gv1va")]
+[node name="Camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_gv1va")]
+player = NodePath("../Player")

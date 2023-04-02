@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://ckwvb26rdq8ha"]
 
 [ext_resource type="Script" path="res://forest/camera.gd" id="1_kmjf7"]
 [ext_resource type="PackedScene" path="res://forest/ui.tscn" id="2_n3fgg"]
@@ -7,12 +7,9 @@
 position = Vector2(144, 80)
 zoom = Vector2(4, 4)
 script = ExtResource("1_kmjf7")
-player = NodePath("../Player")
+player = NodePath("")
 
-[node name="UI" parent="." node_paths=PackedStringArray("hero", "helper", "camera") instance=ExtResource("2_n3fgg")]
-hero = NodePath("../../Player")
-helper = NodePath("../../Helper")
-camera = NodePath("..")
+[node name="UI" parent="." instance=ExtResource("2_n3fgg")]
 
 [node name="Curtain" type="ColorRect" parent="."]
 visible = false

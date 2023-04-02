@@ -6,8 +6,8 @@ class_name Inventory
 @onready var casette_spawner = preload("res://forest/items/casette_ui.tscn")
 
 func _ready():
-	EventBus.get_boomblaster.connect(add_boomblaster)
-	EventBus.get_casette.connect(add_casette)
+	Game.get_boomblaster.connect(add_boomblaster)
+	Game.get_casette.connect(add_casette)
 
 func add_boomblaster():
 	var boomblaster = boomblaster_spawner.instantiate() as Control

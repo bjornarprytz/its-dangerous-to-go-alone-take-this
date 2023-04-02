@@ -10,9 +10,9 @@ var _first_casette : CasetteData = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Camera/Screen.show()
+	curtain.show()
 	ui.hide()
-	EventBus.dialogue_finished.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
+	Game.dialogue_finished.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
 	$Map.entered_cave.connect(_on_cave_entered, CONNECT_DEFERRED)
 	var tween = create_tween().set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
 	

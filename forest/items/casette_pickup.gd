@@ -14,6 +14,6 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	if (body is Player):
-		EventBus.get_casette.emit(casette_data)
+		Game.get_casette.emit(casette_data)
 		AudioPlayer.switch(casette_data)
 		queue_free()

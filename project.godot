@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioPlayer="*res://audio_player.tscn"
-EventBus="*res://event_bus.gd"
+Game="*res://game.gd"
 
 [display]
 
