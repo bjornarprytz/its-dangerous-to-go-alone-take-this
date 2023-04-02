@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd8t85ak3tamk"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="PackedScene" uid="uid://d8sldmkwc1dq" path="res://main/items/casette.tscn" id="1_blb2m"]
-[ext_resource type="Script" path="res://main/items/casette_pickup.gd" id="1_mkkd4"]
+[ext_resource type="PackedScene" path="res://forest/items/casette.tscn" id="1_blb2m"]
+[ext_resource type="Script" path="res://forest/items/casette_pickup.gd" id="1_mkkd4"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_bv1eb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lyrp"]

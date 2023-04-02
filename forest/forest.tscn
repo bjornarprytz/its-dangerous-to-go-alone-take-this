@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://de722iilmbdrv"]
+
+[ext_resource type="Script" path="res://forest/forest.gd" id="1_2re4k"]
+[ext_resource type="PackedScene" path="res://forest/campfire.tscn" id="2_n2t57"]
+[ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="3_dn8ur"]
+[ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="4_ccbnn"]
+[ext_resource type="PackedScene" path="res://camera.tscn" id="5_gv1va"]
+[ext_resource type="Script" path="res://forest/Beasts.gd" id="6_iq5cw"]
+[ext_resource type="PackedScene" path="res://forest/ground.tscn" id="7_oksvw"]
+[ext_resource type="PackedScene" path="res://forest/player.tscn" id="8_wv2ue"]
+
+[node name="Forest" type="Node2D"]
+script = ExtResource("1_2re4k")
+
+[node name="Map" parent="." instance=ExtResource("7_oksvw")]
+
+[node name="Campfire" parent="." instance=ExtResource("2_n2t57")]
+position = Vector2(144, 79)
+
+[node name="Player" parent="." instance=ExtResource("8_wv2ue")]
+position = Vector2(124, 88)
+
+[node name="Helper" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+position = Vector2(159, 69)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_dn8ur")
+
+[node name="PointLight2D" type="PointLight2D" parent="Helper"]
+scale = Vector2(2, 2)
+energy = 0.69
+texture = ExtResource("4_ccbnn")
+
+[node name="Beasts" type="Node2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("6_iq5cw")
+player = NodePath("../Player")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="Camera" parent="." instance=ExtResource("5_gv1va")]

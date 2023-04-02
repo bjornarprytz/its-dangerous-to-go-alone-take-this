@@ -1,6 +1,6 @@
 extends Node2D
 
-var beast_spawner = preload("res://main/beast_eyes.tscn")
+var beast_spawner = preload("res://forest/beast_eyes.tscn")
 @export var player : Node2D
 
 func _ready() -> void:

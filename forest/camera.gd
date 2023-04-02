@@ -2,6 +2,9 @@ extends Camera2D
 
 @export var player : Node2D
 
+@onready var ui : TakeThisUI = $UI
+@onready var curtain = $Curtain
+
 var lock_on_player: bool
 
 func _ready() -> void:

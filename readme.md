@@ -6,6 +6,22 @@
 - End game
   - Loss condition (Eaten by beasts)
   - Win Screen
+- Level Design
+  - Intro
+    - Get boomblaster
+    - Get warning
+    - Get direction
+  - Danger
+    - Meet wolves
+    - Get first tape
+  - Open (Find cave entrance)
+    - Lake
+    - Cabin
+  - Cave
+    - Statue
+  - Freedoom
+  - Wolves
+  - Lake, Cabin
 
 ## Sprites
 
@@ -50,3 +66,5 @@
 - Nøkken
   - Logic
   - Sprite
+- Casette Animation
+  - Separate wheels and tape

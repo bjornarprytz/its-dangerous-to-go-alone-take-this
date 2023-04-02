@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://doboifp4icdp4"]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Texture2D" uid="uid://xnik6s6b820t" path="res://sprites/blink/eye blink1.png" id="1_iwe6c"]
 [ext_resource type="Texture2D" uid="uid://qstomwb0f6nj" path="res://sprites/blink/eye blink2.png" id="2_knbil"]
 [ext_resource type="Texture2D" uid="uid://bcwjn1aqp7jgy" path="res://sprites/blink/eye blink3.png" id="3_pdstf"]
 [ext_resource type="Texture2D" uid="uid://b6fcbg00vi2vr" path="res://sprites/blink/eye blink4.png" id="4_xj35f"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="5_k0gpa"]
-[ext_resource type="Script" path="res://main/beast_eyes.gd" id="5_xdn2v"]
+[ext_resource type="Script" path="res://forest/beast_eyes.gd" id="5_xdn2v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eynei"]
 animations = [{

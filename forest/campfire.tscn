@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://xi4ueye5fjns"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Texture2D" uid="uid://jdke5bfxwanf" path="res://sprites/campfire.png" id="1_3hhsw"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_h2av7"]
-[ext_resource type="Script" path="res://main/campfire.gd" id="2_q41kg"]
+[ext_resource type="Script" path="res://forest/campfire.gd" id="2_q41kg"]
 
 [sub_resource type="Gradient" id="Gradient_j12r5"]
 offsets = PackedFloat32Array(0, 0.666667, 1)

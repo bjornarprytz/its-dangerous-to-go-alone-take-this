@@ -9,4 +9,4 @@ func _ready() -> void:
 	
 	await tween.finished
 	
-	get_tree().change_scene_to_file("res://main/game.tscn")
+	get_tree().change_scene_to_file("res://forest/forest.tscn")

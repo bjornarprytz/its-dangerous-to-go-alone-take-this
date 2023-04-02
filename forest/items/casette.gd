@@ -17,8 +17,8 @@ var data : CasetteData :
 		data = val
 
 func _ready():
-	AudioPlayer.switched_casette.connect(_on_casette_switch)
-	print("Casette spawned ", data.label)
+	if not Engine.is_editor_hint():
+		AudioPlayer.switched_casette.connect(_on_casette_switch)
 	
 func _on_casette_switch(_playing_casette : CasetteData):
 	var was_playing = is_playing

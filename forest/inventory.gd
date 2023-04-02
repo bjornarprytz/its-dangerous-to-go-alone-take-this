@@ -2,8 +2,8 @@ extends Control
 class_name Inventory
 
 
-@onready var boomblaster_spawner = preload("res://main/items/boomblaster.tscn")
-@onready var casette_spawner = preload("res://main/items/casette_ui.tscn")
+@onready var boomblaster_spawner = preload("res://forest/items/boomblaster.tscn")
+@onready var casette_spawner = preload("res://forest/items/casette_ui.tscn")
 
 func _ready():
 	EventBus.get_boomblaster.connect(add_boomblaster)

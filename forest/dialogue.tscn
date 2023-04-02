@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c78xt0getueay"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="FontFile" uid="uid://cykh3afyv4h23" path="res://font/PressStart2P-Regular.ttf" id="1_1btuv"]
-[ext_resource type="Script" path="res://main/dialogue.gd" id="1_4rwps"]
+[ext_resource type="Script" path="res://forest/dialogue.gd" id="1_4rwps"]
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="2_e3dcg"]
 
 [sub_resource type="Theme" id="Theme_kttiy"]
