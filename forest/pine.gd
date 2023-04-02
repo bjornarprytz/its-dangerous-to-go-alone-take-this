@@ -5,7 +5,7 @@ var _player: Player = null
 @export var push_strength = 250.0
 const MAX_RESISTANCE = 120.0
 
-var _resistance : float = 0.0
+var _resistance := 0.0
 
 func _physics_process(delta: float) -> void:
 	if (_player):

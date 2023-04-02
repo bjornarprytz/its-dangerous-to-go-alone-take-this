@@ -5,7 +5,7 @@ var beast_spawner = preload("res://forest/beast_eyes.tscn")
 
 func _ready() -> void:
 	assert(player)
-	Game.dialogue_finished.connect(_spawn_beasts)
+	Game.on_dialogue_finished.connect(_spawn_beasts)
 
 func _spawn_beasts():
 	var screen_size = get_viewport_rect().size

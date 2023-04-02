@@ -1,6 +1,6 @@
 extends Control
 
-var in_transition : bool = false
+var in_transition := false
 
 func _on_start_button_pressed() -> void:
 	_transition()

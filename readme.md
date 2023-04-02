@@ -1,5 +1,10 @@
 # TODO
 
+## Refactor
+
+- Casettes global state
+- 
+
 ## Game
 
 - Run out of music

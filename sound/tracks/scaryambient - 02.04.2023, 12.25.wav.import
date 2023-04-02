@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fwt8bva6mrcw"
+path="res://.godot/imported/scaryambient - 02.04.2023, 12.25.wav-4ca0f030c8c7b0e5961611d55fe4c157.sample"
+
+[deps]
+
+source_file="res://sound/tracks/scaryambient - 02.04.2023, 12.25.wav"
+dest_files=["res://.godot/imported/scaryambient - 02.04.2023, 12.25.wav-4ca0f030c8c7b0e5961611d55fe4c157.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

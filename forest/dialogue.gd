@@ -17,7 +17,7 @@ var lines = [
 		"speaker": SPEAKER.Hero,
 		"event": 
 		{
-			"emitter": Game.get_boomblaster
+			"func": Game.get_boomblaster
 		}
 	},
 	{
@@ -34,12 +34,7 @@ var lines = [
 	},
 	{
 		"words": "You might actually survive getting through the forest if you find them all, heh.",
-		"speaker": SPEAKER.Helper,
-		"event": 
-		{
-			"emitter": Game.get_casette,
-			"arg": CasetteData.Create(Color.BLUE, "Mix tape #7", preload("res://sound/takethis_oneminute.wav"))
-		}
+		"speaker": SPEAKER.Helper
 	}
 	
 ]
@@ -49,23 +44,24 @@ var lines = [
 
 var _tween : Tween
 var _camera_tween : Tween
-var _current_line : int = 0
-var _done_speaking : bool = true
+var _current_line := 0
+var _done_speaking := true
 
 func next():
+	show()
 	if (!_done_speaking):
 		_faster()
 	elif (_current_line == lines.size()):
-		Game.dialogue_finished.emit()
+		Game.on_dialogue_finished.emit()
 		queue_free()
 	else:
 		var line = lines[_current_line]
 		_speak(line["words"], line["speaker"])
 		if ("event" in line):
 			if ("arg" in line["event"]):
-				line["event"]["emitter"].emit(line["event"]["arg"])
+				line["event"]["func"].call(line["event"]["arg"])
 			else:
-				line["event"]["emitter"].emit()
+				line["event"]["func"].call()
 		_current_line += 1
 
 func _speak(what: String,  who: SPEAKER=SPEAKER.Same):

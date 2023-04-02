@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="4_ccbnn"]
 [ext_resource type="PackedScene" uid="uid://ckwvb26rdq8ha" path="res://camera.tscn" id="5_gv1va"]
 [ext_resource type="Script" path="res://forest/Beasts.gd" id="6_iq5cw"]
-[ext_resource type="PackedScene" uid="uid://c6y1hduk4a5t" path="res://forest/ground.tscn" id="7_oksvw"]
+[ext_resource type="PackedScene" uid="uid://bqy1y6lk3hi6o" path="res://forest/ground.tscn" id="7_oksvw"]
 [ext_resource type="PackedScene" path="res://forest/player.tscn" id="8_wv2ue"]
 
 [node name="Forest" type="Node2D"]

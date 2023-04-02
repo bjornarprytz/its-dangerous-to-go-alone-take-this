@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://csmix5f3c6nki"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="AudioStream" uid="uid://d2h6hacg8v8uq" path="res://sound/runningoutofspace_oneminute.wav" id="1_dg2k8"]
+[ext_resource type="AudioStream" uid="uid://bpqm4xn0iw7ob" path="res://sound/tracks/nightisthebeginning - 02.04.2023, 12.27.wav" id="1_x2510"]
 [ext_resource type="Script" path="res://audio_player.gd" id="2_16g0t"]
 
-[node name="Player" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_dg2k8")
+[node name="Player" type="AudioStreamPlayer"]
+stream = ExtResource("1_x2510")
 volume_db = -25.0
 autoplay = true
 script = ExtResource("2_16g0t")

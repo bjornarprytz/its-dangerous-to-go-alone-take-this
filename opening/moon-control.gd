@@ -1,6 +1,6 @@
 extends Sprite2D
 
-var in_transition : bool = false
+var in_transition := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

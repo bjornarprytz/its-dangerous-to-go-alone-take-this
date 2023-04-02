@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://dm2c1wllkigio"]
 
 [ext_resource type="PackedScene" path="res://forest/dialogue.tscn" id="1_icuer"]
 [ext_resource type="Script" path="res://forest/ui.gd" id="1_y6fbk"]
@@ -8,6 +8,7 @@
 script = ExtResource("1_y6fbk")
 
 [node name="Dialogue" parent="." instance=ExtResource("1_icuer")]
+visible = false
 light_mask = 0
 anchors_preset = -1
 anchor_left = 0.500434

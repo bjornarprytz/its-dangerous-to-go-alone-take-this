@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://game.gd" id="1_58h5f"]
 
-[node name="eventbus" type="Node"]
+[node name="game" type="Node"]
 script = ExtResource("1_58h5f")
