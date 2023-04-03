@@ -43,7 +43,6 @@ var lines = [
 @onready var speaker : Sprite2D = $HBox/Container/Speaking
 
 var _tween : Tween
-var _camera_tween : Tween
 var _current_line := 0
 var _done_speaking := true
 

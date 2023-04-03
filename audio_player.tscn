@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://blmi5elcsxnxl"]
 
 [ext_resource type="AudioStream" uid="uid://bpqm4xn0iw7ob" path="res://sound/tracks/nightisthebeginning - 02.04.2023, 12.27.wav" id="1_x2510"]
 [ext_resource type="Script" path="res://audio_player.gd" id="2_16g0t"]

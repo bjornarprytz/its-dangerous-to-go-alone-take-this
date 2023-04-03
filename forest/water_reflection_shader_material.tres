@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://b4wtdmjiskhea"]
+[gd_resource type="ShaderMaterial" load_steps=5 format=3]
 
 [ext_resource type="Shader" path="res://forest/water_reflection.gdshader" id="1_87n5i"]
 [ext_resource type="Texture2D" uid="uid://2i7j3l5nrfw" path="res://sprites/night-sky.png" id="2_q5o2e"]
@@ -11,9 +11,10 @@ noise = SubResource("FastNoiseLite_7iq5w")
 [resource]
 shader = ExtResource("1_87n5i")
 shader_parameter/water_color = Color(0.301961, 0.541176, 0.701961, 1)
-shader_parameter/distortion_scale = Vector2(1, 3)
-shader_parameter/intensity = 0.05
+shader_parameter/distortion_scale = Vector2(1, 5)
+shader_parameter/intensity = 0.03
 shader_parameter/speed = 0.02
-shader_parameter/displacement = Vector2(0, 0)
+shader_parameter/parallax_offset = null
+shader_parameter/parallax_offset_multiplier = Vector2(0.01, 0.02)
 shader_parameter/sky_texture = ExtResource("2_q5o2e")
 shader_parameter/noise = SubResource("NoiseTexture2D_3gfxk")

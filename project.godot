@@ -29,6 +29,12 @@ window/size/resizable=false
 
 project/assembly_name="ItsDangerousTtoGoAloneTakeThis"
 
+[importer_defaults]
+
+texture={
+"mipmaps/generate": true
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

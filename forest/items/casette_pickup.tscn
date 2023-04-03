@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="PackedScene" path="res://forest/items/casette.tscn" id="1_blb2m"]
+[ext_resource type="PackedScene" uid="uid://cvualh5sf6uur" path="res://forest/items/casette.tscn" id="1_blb2m"]
 [ext_resource type="Script" path="res://forest/items/casette_pickup.gd" id="1_mkkd4"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_bv1eb"]
 

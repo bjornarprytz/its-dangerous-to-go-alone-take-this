@@ -9,7 +9,8 @@ uniform vec2 distortion_scale;
 uniform float intensity;
 uniform float speed;
 
-uniform vec2 displacement;
+uniform vec2 parallax_offset;
+uniform vec2 parallax_offset_multiplier = vec2(0.01, 0.02);
 
 void fragment() {
 	float distortion = texture(noise, SCREEN_UV * distortion_scale + TIME * speed).x;
@@ -17,7 +18,7 @@ void fragment() {
 	distortion *= intensity;
 	
 	
-	vec2 reflected_screenuv = vec2(SCREEN_UV.x - distortion, SCREEN_UV.y) + displacement;
+	vec2 reflected_screenuv = vec2(SCREEN_UV.x - distortion, SCREEN_UV.y) + parallax_offset * parallax_offset_multiplier * TEXTURE_PIXEL_SIZE.x;
 	
 	vec4 reflection = texture(sky_texture, reflected_screenuv);
 	

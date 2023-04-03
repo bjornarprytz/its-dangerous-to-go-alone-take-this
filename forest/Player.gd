@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-@export var move_speed = 50.0
+@export var move_speed = 200.0
 
 var push_force = Vector2.ZERO
 

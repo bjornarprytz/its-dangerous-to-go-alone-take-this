@@ -1,10 +1,5 @@
 # TODO
 
-## Refactor
-
-- Casettes global state
-- 
-
 ## Game
 
 - Run out of music
@@ -41,14 +36,6 @@
 
 - Dialogue sound
 - Plukke opp kasett
-- Bytte kasett
-- Trykk på knapp (sånn gammel kasettspillerknapp)
-  - Play
-  - Pause
-  - Eject
-- Raslende blar
-- Knitrende bål
-- Klukkende vann (bevegelser i vannet utenfor synsfelt?)
 - ++ songs
 
 ## Map
@@ -71,5 +58,3 @@
 - Nøkken
   - Logic
   - Sprite
-- Casette Animation
-  - Separate wheels and tape

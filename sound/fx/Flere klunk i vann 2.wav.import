@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c3wribpxn3o4l"
+path="res://.godot/imported/Flere klunk i vann 2.wav-beece9c0c081569076a6a59e975a41bd.sample"
+
+[deps]
+
+source_file="res://sound/fx/Flere klunk i vann 2.wav"
+dest_files=["res://.godot/imported/Flere klunk i vann 2.wav-beece9c0c081569076a6a59e975a41bd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

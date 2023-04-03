@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://di17uft4o0q8g"]
 
 [ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="1_5yso5"]
 [ext_resource type="Script" path="res://forest/Player.gd" id="2_soykt"]
@@ -37,3 +37,6 @@ shape = SubResource("CircleShape2D_ia6y7")
 scale = Vector2(2.3125, 2.3125)
 energy = 0.69
 texture = ExtResource("3_l22if")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true

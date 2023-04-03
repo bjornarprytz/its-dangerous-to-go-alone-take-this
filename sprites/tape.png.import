@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5x5iqne7e8ks"
-path="res://.godot/imported/casette-tape-Sheet.png-e14cdd0e7b33748f18a29ac2a99984fe.ctex"
+uid="uid://sa4wspah1gh0"
+path="res://.godot/imported/tape.png-a959c1beec7dc4c2945aed4911b4f965.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/casette-tape-Sheet.png"
-dest_files=["res://.godot/imported/casette-tape-Sheet.png-e14cdd0e7b33748f18a29ac2a99984fe.ctex"]
+source_file="res://sprites/tape.png"
+dest_files=["res://.godot/imported/tape.png-a959c1beec7dc4c2945aed4911b4f965.ctex"]
 
 [params]
 

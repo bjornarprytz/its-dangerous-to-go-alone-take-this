@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://lqe8qld414p6"]
 
 [ext_resource type="Texture2D" uid="uid://jdke5bfxwanf" path="res://sprites/campfire.png" id="1_3hhsw"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="2_h2av7"]
 [ext_resource type="Script" path="res://forest/campfire.gd" id="2_q41kg"]
+[ext_resource type="AudioStream" uid="uid://ckl1dtd4id5km" path="res://sound/fx/Bålknitre.wav" id="4_lphg7"]
+[ext_resource type="Script" path="res://forest/looptrack.gd" id="5_25peg"]
 
 [sub_resource type="Gradient" id="Gradient_j12r5"]
 offsets = PackedFloat32Array(0, 0.666667, 1)
@@ -39,3 +41,11 @@ texture = ExtResource("2_h2av7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_eq17d")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lphg7")
+volume_db = -5.0
+pitch_scale = 0.75
+autoplay = true
+max_distance = 150.0
+script = ExtResource("5_25peg")
