@@ -1,0 +1,13 @@
+name: My Docker Action
+
+on: push
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      seanmaxwell/godot-ci
+    env:
+      ITCHIO_USERNAME: ${{ env.ITCHIO_USERNAME }}
+      ITCHIO_GAME: ${{ env.ITCHIO_GAME }}
+      BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
