@@ -3,6 +3,7 @@
 fix det her:
 
 - ![striper](image.png)
+- imports i github action ([ref](https://github.com/bjornarprytz/its-dangerous-to-go-alone-take-this/actions/runs/4641630764/jobs/8214797512))
 
 ## Game
 
