@@ -1,11 +1,8 @@
 # TODO
 
-## CI
+fix det her:
 
-- Upload to itch.io using butler
-  - Use butler to upload game files: it only uploads what's changed, generates patches for the [itch.io app](https://itch.io/app), and you can automate it. [Get started](https://itch.io/docs/butler)!
-  - Husk SharedArrayBuffer support
-  - Window: 1152x640
+- ![striper](image.png)
 
 ## Game
 

@@ -1,13 +1,13 @@
-# "Based on" https://github.com/seanmaxwell/godot-example-auto-deploy/blob/main/.github/workflows/godot-ci.yml
+# https://github.com/seanmaxwell/godot-example-auto-deploy/blob/main/.github/workflows/godot-ci.yml
 
-name: godot-ci export
+name: Publish to itch.io
 on: push
 
 env:
-  GODOT_VERSION: "4.0"
-  GAME_NAME: its-dangerous-to-go-alone
   ITCHIO_USERNAME: bjornarprytz
+  GAME_NAME: its-dangerous-to-go-alone
   PROJECT_PATH: "./src/"
+  GODOT_VERSION: "4.0.2"
 
 jobs:
   export-game:
@@ -20,10 +20,11 @@ jobs:
         id: export
         uses: firebelley/godot-export@v5.0.0
         with:
-          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.0.1/Godot_v4.0.1-stable_linux.x86_64.zip
-          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.0.1/Godot_v4.0.1-stable_export_templates.tpz
+          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/${{env.GODOT_VERSION}}/Godot_v${{env.GODOT_VERSION}}-stable_linux.x86_64.zip
+          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/${{env.GODOT_VERSION}}/Godot_v${{env.GODOT_VERSION}}-stable_export_templates.tpz
           relative_project_path: ${{ env.PROJECT_PATH}}
           use_godot_4: true
+          use_preset_export_path: true
       - name: Upload Windows Artifact
         uses: actions/upload-artifact@v3
         with:
