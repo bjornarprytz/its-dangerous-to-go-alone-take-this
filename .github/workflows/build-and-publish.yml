@@ -2,14 +2,36 @@ name: My Docker Action
 
 on: push
 
+env:
+  GODOT_VERSION: 4.0
+  ITCHIO_USERNAME: ${{ env.ITCHIO_USERNAME }}
+  ITCHIO_GAME: ${{ env.ITCHIO_GAME }}
+  BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+  EXPORT_NAME: ${{ env.EXPORT_NAME }}
+  PROJECT_PATH: ${{ env.PROJECT_PATH }}
+
 jobs:
-  publish:
-    runs-on: ubuntu-latest
+  export-web:
+    name: Web Export
+    runs-on: ubuntu-20.04
     container:
-      seanmaxwell/godot-ci:4.0
-    env:
-      ITCHIO_USERNAME: ${{ env.ITCHIO_USERNAME }}
-      ITCHIO_GAME: ${{ env.ITCHIO_GAME }}
-      BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
-      EXPORT_NAME: ${{ env.EXPORT_NAME }}
-      PROJECT_PATH: ${{ env.PROJECT_PATH }}
+      image: seanmaxwell/godot-ci:4.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      - name: Setup
+        run: |
+          mkdir -v -p ~/.local/share/godot/templates
+          mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+      - name: Web Build
+        run: |
+          mkdir -v -p build/web
+          cd $PROJECT_PATH
+          godot -v --export "HTML5" ../build/web/index.html
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: web
+          path: build/web
