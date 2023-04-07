@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://forest/ground.gd" id="1_i76s4"]
 [ext_resource type="Texture2D" uid="uid://ctm1br8wttfg6" path="res://sprites/decor_16x16.png" id="2_0m6sq"]
 [ext_resource type="Texture2D" uid="uid://dl5uee84e0y4u" path="res://sprites/grass.png" id="3_cj8x4"]
-[ext_resource type="Material" path="res://forest/water_reflection_shader_material.tres" id="4_dwfwp"]
+[ext_resource type="Material" uid="uid://b045qau53ekjm" path="res://forest/water_reflection_shader_material.tres" id="4_dwfwp"]
 [ext_resource type="Texture2D" uid="uid://6q538c7byn4x" path="res://sprites/water1.png" id="5_av6gs"]
 [ext_resource type="Texture2D" uid="uid://ip7xul78kbot" path="res://sprites/water_decorations.png" id="6_1wbki"]
 [ext_resource type="Texture2D" uid="uid://yolqk56vn3h7" path="res://sprites/water_lillies.png" id="7_agp6i"]
