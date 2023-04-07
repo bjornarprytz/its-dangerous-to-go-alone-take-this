@@ -13,11 +13,11 @@ jobs:
       image: seanmaxwell/godot-ci:4.0
     env:
       GODOT_VERSION: 4.0
-      ITCHIO_USERNAME: ${{env.ITCHIO_USERNAME}}
-      ITCHIO_GAME: ${{env.ITCHIO_GAME}}
+      ITCHIO_USERNAME: ${{github.repository.ITCHIO_USERNAME}}
+      ITCHIO_GAME: ${{github.repository.ITCHIO_GAME}}
       BUTLER_API_KEY: ${{secrets.BUTLER_API_KEY}}
-      EXPORT_NAME: ${{env.EXPORT_NAME}}
-      PROJECT_PATH: ${{env.PROJECT_PATH}}
+      EXPORT_NAME: ${{github.repository.EXPORT_NAME}}
+      PROJECT_PATH: ${{github.repository.PROJECT_PATH}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
