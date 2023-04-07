@@ -5,10 +5,8 @@ on: push
 
 env:
   GODOT_VERSION: "4.0"
-  ITCHIO_USERNAME: ${{github.repository.ITCHIO_USERNAME}}
-  GAME_NAME: ${{github.repository.ITCHIO_GAME}}
-  BUTLER_API_KEY: ${{secrets.BUTLER_API_KEY}}
-  EXPORT_NAME: ${{github.repository.EXPORT_NAME}}
+  GAME_NAME: its-dangerous-to-go-alone
+  ITCHIO_USERNAME: bjornarprytz
   PROJECT_PATH: "./src/"
 
 jobs:
@@ -53,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        platform: [windows, mac, linux, web]
+        platform: [web] # Other options: windows, mac, linux
     steps:
       - name: Download Artifact (${{ matrix.platform }})
         uses: actions/download-artifact@v3
@@ -65,6 +63,6 @@ jobs:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: ${{ matrix.platform }}
           ITCH_GAME: ${{ env.GAME_NAME }}
-          ITCH_USER: ${{ github.repository.ITCHIO_USERNAME }}
+          ITCH_USER: ${{ env.ITCHIO_USERNAME }}
           PACKAGE: .
           VERSION: ${{ github.ref_name }}
