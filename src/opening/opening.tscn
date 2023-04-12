@@ -101,12 +101,4 @@ offset_top = 162.0
 offset_right = 452.0
 offset_bottom = 332.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 498.0
-offset_top = 287.0
-offset_right = 864.0
-offset_bottom = 406.0
-text = "IT'S WORKING!!!"
-
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
