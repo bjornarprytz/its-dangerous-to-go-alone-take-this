@@ -29,6 +29,10 @@ window/size/resizable=false
 
 project/assembly_name="ItsDangerousTtoGoAloneTakeThis"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [importer_defaults]
 
 texture={
