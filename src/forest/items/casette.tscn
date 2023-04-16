@@ -27,6 +27,10 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="Theme" id="Theme_h5v02"]
+default_font = ExtResource("3_3p5wo")
+default_font_size = 128
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_scwyd"]
 atlas = ExtResource("3_omiu2")
 region = Rect2(0, 0, 19, 11)
@@ -301,10 +305,6 @@ animations = [{
 "speed": 1.0
 }]
 
-[sub_resource type="Theme" id="Theme_h5v02"]
-default_font = ExtResource("3_3p5wo")
-default_font_size = 128
-
 [node name="Casette" type="Node2D"]
 script = ExtResource("1_fgxc6")
 
@@ -314,26 +314,45 @@ animation = &"Casette"
 frame_progress = 0.0184608
 centered = false
 
+[node name="C" type="Control" parent="CasetteAnimation"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 14.0
+
+[node name="Label" type="RichTextLabel" parent="CasetteAnimation/C"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.069
+anchor_right = 1.079
+anchor_bottom = 1.0
+offset_left = 3.933
+offset_right = 1488.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.04, 0.04)
+theme = SubResource("Theme_h5v02")
+text = "Mix Tape #7"
+
+[node name="ColorBand" type="ColorRect" parent="CasetteAnimation"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 34.0
+offset_right = -1.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.796078, 0.858824, 0.988235, 1)
+
 [node name="TapeAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(35, 20)
 sprite_frames = SubResource("SpriteFrames_vws4x")
 animation = &"Tape"
 frame_progress = 0.474089
 centered = false
-
-[node name="ColorBand" type="ColorRect" parent="."]
-offset_left = 1.0
-offset_top = 34.0
-offset_right = 89.0
-offset_bottom = 37.0
-color = Color(0.796078, 0.858824, 0.988235, 1)
-
-[node name="Label" type="RichTextLabel" parent="."]
-modulate = Color(0, 0, 0, 1)
-offset_left = 16.0
-offset_top = 9.0
-offset_right = 1641.0
-offset_bottom = 153.0
-scale = Vector2(0.04, 0.04)
-theme = SubResource("Theme_h5v02")
-text = "Mix Tape #7"
