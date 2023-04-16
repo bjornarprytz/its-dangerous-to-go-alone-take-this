@@ -1,7 +1,10 @@
 # https://github.com/seanmaxwell/godot-example-auto-deploy/blob/main/.github/workflows/godot-ci.yml
 
 name: Publish to itch.io
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 
 env:
   ITCHIO_USERNAME: bjornarprytz
