@@ -41,6 +41,9 @@ var lines = [
 
 @onready var words : RichTextLabel = $HBox/Words
 @onready var speaker : Sprite2D = $HBox/Container/Speaking
+@onready var helper_sprite = preload("res://sprites/characters/helper-head.png")
+@onready var hero_sprite = preload("res://sprites/characters/hero-head.png")
+
 
 var _tween : Tween
 var _current_line := 0
@@ -65,9 +68,9 @@ func next():
 
 func _speak(what: String,  who: SPEAKER=SPEAKER.Same):
 	if (who == SPEAKER.Helper):
-		speaker.modulate = Color.YELLOW
+		speaker.texture = helper_sprite
 	if (who == SPEAKER.Hero):
-		speaker.modulate = Color.BLUE
+		speaker.texture = hero_sprite
 	
 	words.visible_ratio = 0.0
 	_done_speaking = false

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://forest/forest.gd" id="1_2re4k"]
 [ext_resource type="PackedScene" uid="uid://lqe8qld414p6" path="res://forest/campfire.tscn" id="2_n2t57"]
-[ext_resource type="Texture2D" uid="uid://dsqi3hj4t5jf8" path="res://icon.svg" id="3_dn8ur"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="4_ccbnn"]
 [ext_resource type="PackedScene" uid="uid://ckwvb26rdq8ha" path="res://camera.tscn" id="5_gv1va"]
+[ext_resource type="Texture2D" uid="uid://v47vgigpnesj" path="res://sprites/characters/helper.png" id="5_m4num"]
 [ext_resource type="Script" path="res://forest/Beasts.gd" id="6_iq5cw"]
 [ext_resource type="PackedScene" uid="uid://y37rwa7yqvc6" path="res://forest/ground.tscn" id="7_oksvw"]
 [ext_resource type="PackedScene" uid="uid://di17uft4o0q8g" path="res://forest/player.tscn" id="8_wv2ue"]
@@ -21,10 +21,9 @@ position = Vector2(144, 79)
 position = Vector2(124, 88)
 
 [node name="Helper" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(159, 69)
-scale = Vector2(0.125, 0.125)
-texture = ExtResource("3_dn8ur")
+position = Vector2(157, 71)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("5_m4num")
 
 [node name="PointLight2D" type="PointLight2D" parent="Helper"]
 scale = Vector2(2, 2)
