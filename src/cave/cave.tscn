@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://hgqwblnfhy88"]
 
 [ext_resource type="PackedScene" uid="uid://ckwvb26rdq8ha" path="res://camera.tscn" id="1_xqpe6"]
 [ext_resource type="Texture2D" uid="uid://bvcuiex4h7myg" path="res://sprites/0x72_DungeonTilesetII_v1.4.png" id="2_00dma"]
-[ext_resource type="PackedScene" uid="uid://hokimssgld7e" path="res://forest/player.tscn" id="3_totp8"]
+[ext_resource type="PackedScene" uid="uid://di17uft4o0q8g" path="res://forest/player.tscn" id="3_totp8"]
 [ext_resource type="Texture2D" uid="uid://cdkkxsspde7j3" path="res://sprites/point-light.png" id="4_xfw8w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6baj"]

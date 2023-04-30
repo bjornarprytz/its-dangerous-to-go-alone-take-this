@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ip7xul78kbot" path="res://sprites/water_decorations.png" id="6_1wbki"]
 [ext_resource type="Texture2D" uid="uid://yolqk56vn3h7" path="res://sprites/water_lillies.png" id="7_agp6i"]
 [ext_resource type="PackedScene" path="res://forest/pine.tscn" id="8_4mu1o"]
-[ext_resource type="PackedScene" path="res://forest/items/casette_pickup.tscn" id="9_b26du"]
+[ext_resource type="PackedScene" uid="uid://b1j202ymrqql1" path="res://forest/items/casette_pickup.tscn" id="9_b26du"]
 [ext_resource type="Script" path="res://forest/items/casette_data.gd" id="10_kwx2w"]
 [ext_resource type="AudioStream" uid="uid://c2ev4jw0lmtri" path="res://sound/tracks/bossfightfeeling - 02.04.2023, 12.26.wav" id="10_pds0o"]
 [ext_resource type="Script" path="res://forest/play_random_effects.gd" id="11_6m045"]
