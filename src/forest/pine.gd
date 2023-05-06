@@ -2,8 +2,8 @@ extends Node2D
 
 var _player: Player = null
 
-@export var push_strength = 250.0
-const MAX_RESISTANCE = 120.0
+@export var push_strength = 200.0
+const MAX_RESISTANCE = 100.0
 
 var _resistance := 0.0
 

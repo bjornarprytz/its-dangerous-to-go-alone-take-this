@@ -38,4 +38,5 @@ player = NodePath("../Player")
 color = Color(0.12549, 0.12549, 0.12549, 1)
 
 [node name="Camera" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_gv1va")]
+zoom = Vector2(10, 10)
 player = NodePath("../Player")
