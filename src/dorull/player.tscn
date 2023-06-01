@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://co1f3pns1pv1r"]
+
+[ext_resource type="Texture2D" uid="uid://hpgb0qcn7dve" path="res://assets/skiier.png" id="1_slsna"]
+[ext_resource type="Script" path="res://player.gd" id="2_d7wxg"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("2_d7wxg")
+
+[node name="Sprite" type="Sprite3D" parent="."]
+transform = Transform3D(-1.39439e-08, 0.319, 0, -0.319, -1.39439e-08, 0, 0, 0, 0.319, 1.63894, 0, 0)
+texture = ExtResource("1_slsna")

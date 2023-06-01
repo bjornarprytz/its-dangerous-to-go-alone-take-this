@@ -7,7 +7,6 @@ func _ready() -> void:
 	curtain.show()
 	ui.hide()
 	Game.on_dialogue_finished.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
-	$Map.entered_cave.connect(_on_cave_entered, CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 	var tween = create_tween().set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
 	
 	tween.tween_property(curtain, 'modulate:a', 0.0, 1.0)

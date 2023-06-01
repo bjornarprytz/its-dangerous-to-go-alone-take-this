@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg1sqt6bji55g"]
+
+[ext_resource type="Script" path="res://dorull/tree.gd" id="1_68unc"]
+[ext_resource type="Texture2D" uid="uid://c2ovhf630womm" path="res://assets/tree1.png" id="1_f5opa"]
+
+[node name="Origin" type="Node3D"]
+script = ExtResource("1_68unc")
+
+[node name="Tree" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0, 0.5, 0, 0, 0)
+centered = false
+billboard = 1
+shaded = true
+double_sided = false
+texture = ExtResource("1_f5opa")
