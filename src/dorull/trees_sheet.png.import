@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sa4wspah1gh0"
-path.s3tc="res://.godot/imported/tape.png-a959c1beec7dc4c2945aed4911b4f965.s3tc.ctex"
+uid="uid://da682e24delje"
+path.s3tc="res://.godot/imported/trees_sheet.png-8b9e4f02c5b2f2152ee51acff93fccad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/tape.png"
-dest_files=["res://.godot/imported/tape.png-a959c1beec7dc4c2945aed4911b4f965.s3tc.ctex"]
+source_file="res://dorull/trees_sheet.png"
+dest_files=["res://.godot/imported/trees_sheet.png-8b9e4f02c5b2f2152ee51acff93fccad.s3tc.ctex"]
 
 [params]
 

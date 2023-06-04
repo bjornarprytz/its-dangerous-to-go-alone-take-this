@@ -1,50 +1,167 @@
-[gd_scene load_steps=9 format=3 uid="uid://5we6jxgrgn04"]
+[gd_scene load_steps=10 format=3 uid="uid://5we6jxgrgn04"]
 
 [ext_resource type="Script" path="res://dorull/dorull_main.gd" id="1_ra2hy"]
 [ext_resource type="Shader" path="res://dorull/grass.gdshader" id="2_83scb"]
 [ext_resource type="PackedScene" uid="uid://dg1sqt6bji55g" path="res://dorull/tree.tscn" id="3_8dvd6"]
 [ext_resource type="Script" path="res://dorull/ground-control.gd" id="3_55ajx"]
 [ext_resource type="Texture2D" uid="uid://br1mga8h05kfl" path="res://dorull/grass_texture.png" id="3_ll850"]
-[ext_resource type="Texture2D" uid="uid://2i7j3l5nrfw" path="res://sprites/night-sky.png" id="7_ata81"]
+[ext_resource type="Texture2D" uid="uid://jg4d1teqcvin" path="res://sprites/moon.png" id="7_c8f2o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1w6t8"]
 render_priority = 0
 shader = ExtResource("2_83scb")
-shader_parameter/wind_strength = 0.1
-shader_parameter/wind_speed = 0.05
+shader_parameter/wind_strength = 0.05
+shader_parameter/wind_speed = 0.2
+shader_parameter/tile_factor = Vector2(200, 40)
 shader_parameter/grass_texture = ExtResource("3_ll850")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjoe2"]
-albedo_texture = ExtResource("7_ata81")
+[sub_resource type="Sky" id="Sky_xe2ce"]
+
+[sub_resource type="Environment" id="Environment_a04ub"]
+background_mode = 2
+sky = SubResource("Sky_xe2ce")
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_ra2hy")
 
 [node name="Ground" type="CSGCylinder3D" parent="."]
-transform = Transform3D(1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 0, 0, 1, -8.21011, -0.383, 0.181)
-radius = 30.0
-height = 74.552
+transform = Transform3D(0.980271, 0, -0.197657, 0, 1, 0, 0.197657, 0, 0.980271, 0, 0, 0)
+radius = 5.0
+height = 11.176
 sides = 64
 material = SubResource("ShaderMaterial_1w6t8")
 script = ExtResource("3_55ajx")
 
 [node name="Tree" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 5.16275e-16, 2.98023e-08, -1.42109e-14, 1, 5.32907e-15, -2.98023e-08, 3.44862e-15, 1, 3.96907, 1.11717, -3.36607)
+
+[node name="Tree2" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.04, 0.526105, -3.01428)
+
+[node name="Tree3" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.01575, -0.118969, -3.13455)
+
+[node name="Tree9" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.99118, -0.432137, -3.25639)
+
+[node name="Tree4" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.05577, -0.816572, -2.93604)
+
+[node name="Tree5" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.05249, -1.53211, -2.95232)
+
+[node name="Tree6" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.98382, -2.08727, -3.2929)
+
+[node name="Tree7" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.96547, -2.70935, -3.3839)
+
+[node name="Tree8" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.02007, -3.40296, -3.11309)
+
+[node name="Tree10" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.63829, 1.11717, -3.95933)
+
+[node name="Tree11" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.70922, 0.526105, -3.60755)
+
+[node name="Tree12" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.68497, -0.118969, -3.72781)
+
+[node name="Tree13" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.6604, -0.432137, -3.84965)
+
+[node name="Tree14" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.725, -0.816572, -3.52931)
+
+[node name="Tree15" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.72171, -1.53211, -3.54559)
+
+[node name="Tree16" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.65304, -2.08727, -3.88617)
+
+[node name="Tree17" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.63469, -2.70935, -3.97717)
+
+[node name="Tree18" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.6893, -3.40296, -3.70636)
+
+[node name="Tree19" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.27497, 1.11717, -4.35633)
+
+[node name="Tree20" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.3459, 0.526105, -4.00455)
+
+[node name="Tree21" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.32165, -0.118969, -4.12481)
+
+[node name="Tree22" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.29708, -0.432137, -4.24665)
+
+[node name="Tree23" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.36167, -0.816572, -3.92631)
+
+[node name="Tree24" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.35839, -1.53211, -3.94259)
+
+[node name="Tree25" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.28972, -2.08727, -4.28316)
+
+[node name="Tree26" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.27137, -2.70935, -4.37416)
+
+[node name="Tree27" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 3.32597, -3.40296, -4.10336)
+
+[node name="Tree28" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.18541, 1.11717, -2.59852)
+
+[node name="Tree29" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.25634, 0.526105, -2.24674)
+
+[node name="Tree30" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.23209, -0.118969, -2.36701)
+
+[node name="Tree31" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.20753, -0.432137, -2.48885)
+
+[node name="Tree32" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.27212, -0.816572, -2.1685)
+
+[node name="Tree33" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.26884, -1.53211, -2.18478)
+
+[node name="Tree34" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.20016, -2.08727, -2.52536)
+
+[node name="Tree35" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.18182, -2.70935, -2.61636)
+
+[node name="Tree36" parent="Ground" instance=ExtResource("3_8dvd6")]
+transform = Transform3D(1, 0, 1.49012e-08, -3.55271e-15, 1, 8.88178e-16, -1.49012e-08, 8.88178e-16, 1, 4.23642, -3.40296, -2.34555)
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 21.2635, -1.71564, 24.6318)
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 5.05859, -1.716, 0.247768)
 current = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Camera"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
-omni_range = 307.573
-omni_attenuation = 0.0980722
+omni_range = 3.0
 
 [node name="Timer" type="Timer" parent="Camera"]
 wait_time = 10.0
 autostart = true
 
-[node name="Sky" type="Sprite3D" parent="."]
-transform = Transform3D(-4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0, 10, 25.8504, -1.3, -7.9164)
-material_override = SubResource("StandardMaterial3D_hjoe2")
-texture = ExtResource("7_ata81")
+[node name="Moon" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.61326, 3.06763, -7.51811)
+texture = ExtResource("7_c8f2o")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Moon"]
+light_color = Color(0, 0.596078, 0.6, 1)
+light_energy = 1.127
+omni_range = 20.0
+omni_attenuation = 0.125001
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a04ub")

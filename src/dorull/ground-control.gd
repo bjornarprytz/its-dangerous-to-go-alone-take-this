@@ -3,10 +3,6 @@ extends CSGCylinder3D
 
 @onready var tree_spawner = preload("res://dorull/tree.tscn")
 
-@onready var t1 = preload("res://assets/tree1.png")
-@onready var t2 = preload("res://assets/tree2.png")
-@onready var t3 = preload("res://assets/tree3.png")
-
 const PIXEL_TO_METER_RATIO = 200
 
 func _ready() -> void:
@@ -24,4 +20,3 @@ func spawn_tree():
 	
 	tree.rotation_degrees.y = randf_range(0, 360)
 	tree.tree_sprite.scale = Vector3.ONE * randf_range(0.2, 0.6)
-	tree.tree_sprite.texture = [t1, t2, t3].pick_random()
