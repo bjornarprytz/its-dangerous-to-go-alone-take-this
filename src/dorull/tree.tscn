@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://da682e24delje" path="res://dorull/trees_sheet.png" id="2_g76cf"]
 
 [node name="Origin" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.112451, 0.409292, 0)
 script = ExtResource("1_68unc")
 
 [node name="Tree" type="Sprite3D" parent="."]
-transform = Transform3D(-2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0, 0.5, 0, -0.0532051, 0)
+transform = Transform3D(0.5, 2.18557e-08, 2.18557e-08, 2.18557e-08, -2.18557e-08, -0.5, -2.18557e-08, 0.5, -2.18557e-08, 0, 0, 0)
 transparency = 0.5
 cast_shadow = 2
 centered = false
-billboard = 2
 shaded = true
 double_sided = false
 texture = ExtResource("2_g76cf")
